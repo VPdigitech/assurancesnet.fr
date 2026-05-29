@@ -1,0 +1,34 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/quiz-bilan-sante", "destination": "/blog/quiz-bilan-sante.html" },
+    { "source": "/test-auditif-gratuit", "destination": "/blog/test-auditif-gratuit.html" },
+    { "source": "/mutuelle-senior-medecines-douces", "destination": "/blog/mutuelle-senior-medecines-douces.html" },
+    { "source": "/meilleure-mutuelle-dentaire-senior", "destination": "/blog/meilleure-mutuelle-dentaire-senior.html" },
+    { "source": "/mutuelle-cure-thermale-hebergement", "destination": "/blog/mutuelle-cure-thermale-hebergement.html" },
+    { "source": "/cures-thermales-2026-remboursement-mutuelle", "destination": "/blog/cures-thermales-2026.html" },
+    { "source": "/meilleur-appareil-auditif", "destination": "/blog/meilleur-appareil-auditif.html" },
+    { "source": "/amplifon-vs-audika", "destination": "/blog/amplifon-vs-audika.html" },
+    { "source": "/meilleur-test-microbiote", "destination": "/blog/meilleur-test-microbiote.html" },
+    { "source": "/meilleure-montre-sante", "destination": "/blog/meilleure-montre-sante.html" },
+    { "source": "/oura-ring-galaxy-ring-comparatif", "destination": "/blog/oura-vs-galaxy-ring.html" },
+    { "source": "/osteopathie-arthrose-remboursement-60-ans", "destination": "/blog/osteopathie-arthrose.html" },
+    { "source": "/senior-ne-plus-payer-maternite-mutuelle", "destination": "/blog/mutuelle-garanties-inutiles.html" },
+    { "source": "/meilleure-plateforme-teleconsultation", "destination": "/blog/teleconsultation.html" },
+    { "source": "/meilleur-test-sante-domicile", "destination": "/blog/test-sante-domicile.html" },
+    { "source": "/microbiote-seniors-test-adn-bien-vieillir", "destination": "/blog/microbiote-seniors.html" },
+    { "source": "/viome-vs-flore", "destination": "/blog/viome-vs-flore.html" },
+    { "source": "/mentions-legales", "destination": "/blog/mentions-legales.html" },
+    { "source": "/contact", "destination": "/blog/contact.html" }
+  ]
+}
