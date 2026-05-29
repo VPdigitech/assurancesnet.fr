@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Lettre Santé · AssurancesNet.fr · Juin 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #faf8f4;
+  --surface: #ffffff;
+  --border: #e2ddd5;
+  --ink: #1a1714;
+  --muted: #7a736a;
+  --green: #1e5438;
+  --green-mid: #2a6349;
+  --green-light: #d2eddc;
+  --amber: #b86e00;
+  --amber-light: #fdf0d5;
+  --blue: #1a5e8a;
+  --blue-light: #daeaf6;
+  --warm: #f5f0e8;
+}
+body { background: #e8e4dc; font-family: 'Outfit', sans-serif; font-size: 15px; line-height: 1.7; color: var(--ink); margin: 0; padding: 20px; -webkit-font-smoothing: antialiased; }
+
+/* WRAPPER EMAIL */
+.email-wrap { max-width: 620px; margin: 0 auto; background: var(--surface); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 32px rgba(0,0,0,.12); }
+
+/* ── HEADER ── */
+.nl-header { background: var(--ink); padding: 32px 36px 28px; text-align: center; position: relative; overflow: hidden; }
+.nl-header::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 20px 20px; }
+.nl-header-in { position: relative; z-index: 1; }
+.nl-logo { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; text-decoration: none; }
+.nl-logo-icon { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--green), #3d8a5f); display: flex; align-items: center; justify-content: center; font-size: 17px; }
+.nl-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: white; }
+.nl-logo-text em { font-style: normal; color: #5fe87e; }
+.nl-header-rule { width: 48px; height: 2px; background: rgba(255,255,255,.15); margin: 0 auto 14px; border-radius: 1px; }
+.nl-issue { font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 8px; }
+.nl-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 4vw, 30px); font-weight: 700; color: white; line-height: 1.15; margin-bottom: 8px; }
+.nl-title em { font-style: italic; color: #5fe87e; }
+.nl-subtitle { font-size: 13px; color: rgba(255,255,255,.45); font-weight: 300; }
+
+/* ── SOMMAIRE ── */
+.nl-toc { background: var(--warm); border-bottom: 1px solid var(--border); padding: 18px 36px; }
+.nl-toc-title { font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.nl-toc-items { display: flex; flex-direction: column; gap: 5px; }
+.nl-toc-item { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.nl-toc-item::before { content: '§'; color: var(--green-mid); font-weight: 700; font-size: 11px; }
+.nl-toc-item a { color: var(--muted); text-decoration: none; }
+.nl-toc-item a:hover { color: var(--green-mid); }
+
+/* ── BODY ── */
+.nl-body { padding: 36px; }
+
+/* ── EDITORIAL ── */
+.editorial { margin-bottom: 36px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+.ed-kicker { font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--green-mid); margin-bottom: 8px; }
+.ed-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 12px; line-height: 1.2; }
+.ed-anecdote { background: var(--warm); border-left: 4px solid var(--green-mid); border-radius: 0 10px 10px 0; padding: 14px 16px; margin-bottom: 16px; font-size: 14px; color: var(--ink); line-height: 1.7; font-style: italic; }
+.ed-anecdote cite { display: block; font-size: 12px; color: var(--muted); font-style: normal; margin-top: 8px; }
+.ed-text { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 12px; }
+.ed-text strong { color: var(--ink); }
+.ed-sign { display: flex; align-items: center; gap: 10px; margin-top: 16px; }
+.ed-sign-av { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--amber), var(--green-mid)); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.ed-sign-name { font-size: 13px; font-weight: 600; color: var(--ink); }
+.ed-sign-role { font-size: 11px; color: var(--muted); }
+
+/* ── ARTICLE SECTION ── */
+.nl-section { margin-bottom: 32px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+.nl-section:last-of-type { border-bottom: none; margin-bottom: 0; }
+
+.section-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 8px; }
+.st-green { background: var(--green-light); color: var(--green-mid); }
+.st-amber { background: var(--amber-light); color: var(--amber); }
+.st-blue { background: var(--blue-light); color: var(--blue); }
+.st-warm { background: var(--warm); color: var(--muted); border: 1px solid var(--border); }
+
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 10px; line-height: 1.25; }
+.section-text { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 12px; }
+.section-text strong { color: var(--ink); }
+
+/* CTA affilié naturel */
+.cta-naturel { display: inline-flex; align-items: center; gap: 7px; background: var(--green-mid); color: white; font-size: 13px; font-weight: 600; padding: 10px 20px; border-radius: 9px; text-decoration: none; margin-top: 12px; }
+
+/* Points pratiques */
+.practical-list { background: var(--warm); border-radius: 10px; padding: 16px 18px; margin: 14px 0; }
+.practical-list-title { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.practical-list ul { list-style: none; }
+.practical-list li { font-size: 13.5px; color: var(--ink); padding: 5px 0; display: flex; gap: 9px; align-items: flex-start; border-bottom: 1px solid var(--border); line-height: 1.5; }
+.practical-list li:last-child { border-bottom: none; }
+.practical-list li::before { content: '✓'; color: var(--green-mid); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+/* Top mutuelles mini */
+.mutuelle-mini { display: flex; gap: 8px; flex-direction: column; margin: 14px 0; }
+.mm { background: var(--surface); border: 1.5px solid var(--border); border-radius: 10px; padding: 12px 14px; display: flex; align-items: center; gap: 12px; text-decoration: none; transition: border-color .15s; }
+.mm:hover { border-color: var(--green-mid); }
+.mm.mm-star { border-color: rgba(184,110,0,.35); background: linear-gradient(135deg,#fff,#fffdf5); }
+.mm-rank { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+.rank-1 { background: var(--amber); color: white; }
+.rank-2 { background: var(--green-mid); color: white; }
+.rank-3 { background: var(--blue); color: white; }
+.mm-info { flex: 1; }
+.mm-name { font-weight: 700; font-size: 13.5px; color: var(--ink); }
+.mm-detail { font-size: 11.5px; color: var(--muted); }
+.mm-pct { font-weight: 700; font-size: 14px; color: var(--amber); margin-right: 8px; flex-shrink: 0; }
+.mm-btn { font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 6px; background: var(--green-mid); color: white; flex-shrink: 0; }
+
+/* Alert box */
+.alert-nl { background: #fef3e2; border: 1px solid rgba(184,110,0,.25); border-left: 4px solid var(--amber); border-radius: 8px; padding: 13px 15px; margin: 14px 0; font-size: 13px; color: #7a4800; line-height: 1.65; }
+.alert-nl strong { color: #5a3000; }
+
+/* Bien-être section */
+.wellness-box { background: linear-gradient(135deg, #f0f9f4, #e8f5f0); border: 1px solid var(--green-light); border-radius: 12px; padding: 20px; margin: 14px 0; }
+.wb-icon { font-size: 28px; margin-bottom: 10px; }
+.wb-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.wb-text { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+
+/* ── NEWSLETTER SIGN ── */
+.nl-forward { background: var(--warm); border-radius: 10px; padding: 16px 18px; margin: 24px 0; text-align: center; }
+.nl-forward-text { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+.nl-forward-btn { display: inline-block; font-size: 12px; font-weight: 600; color: var(--green-mid); background: var(--green-light); padding: 7px 16px; border-radius: 7px; text-decoration: none; }
+
+/* ── FOOTER ── */
+.nl-footer { background: var(--ink); padding: 24px 36px; text-align: center; }
+.nlf-logo { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: white; margin-bottom: 8px; }
+.nlf-text { font-size: 11px; color: rgba(255,255,255,.35); line-height: 1.7; margin-bottom: 12px; }
+.nlf-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.nlf-link { font-size: 11px; color: rgba(255,255,255,.35); text-decoration: none; }
+.nlf-link:hover { color: rgba(255,255,255,.6); }
+.nlf-unsub { font-size: 10.5px; color: rgba(255,255,255,.2); margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<div class="email-wrap">
+
+  <!-- ── HEADER ── -->
+  <div class="nl-header">
+    <div class="nl-header-in">
+      <div class="nl-logo">
+        <div class="nl-logo-icon">🌿</div>
+        <span class="nl-logo-text">Assurances<em>Net</em>.fr</span>
+      </div>
+      <div class="nl-header-rule"></div>
+      <div class="nl-issue">La Lettre Santé · Juin 2026 · N°3</div>
+      <div class="nl-title">Ces garanties que vous payez<br><em>sans le savoir</em></div>
+      <div class="nl-subtitle">Mutuelles · Dentaire · Cures thermales · Médecines douces · Bien-être</div>
+    </div>
+  </div>
+
+  <!-- ── SOMMAIRE ── -->
+  <div class="nl-toc">
+    <div class="nl-toc-title">Au sommaire ce mois-ci</div>
+    <div class="nl-toc-items">
+      <div class="nl-toc-item"><a href="#editorial">L'éditorial : ce que votre mutuelle ne vous dit pas</a></div>
+      <div class="nl-toc-item"><a href="#dentaire">Les 5 meilleures mutuelles dentaires en 2026</a></div>
+      <div class="nl-toc-item"><a href="#thermales">Cures thermales 2026 : la réforme qui a failli tout changer</a></div>
+      <div class="nl-toc-item"><a href="#conseil">5 choses à vérifier dans votre contrat avant l'été</a></div>
+      <div class="nl-toc-item"><a href="#bienetre">Marcher en conscience : ce que la science dit vraiment</a></div>
+    </div>
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="nl-body">
+
+    <!-- ÉDITORIAL -->
+    <div class="editorial" id="editorial">
+      <div class="ed-kicker">L'éditorial de Marie Fontaine</div>
+      <div class="ed-title">Ce que votre mutuelle ne vous dit pas spontanément</div>
+
+      <div class="ed-anecdote">
+        "J'avais 71 ans quand j'ai compris que je payais depuis six ans une garantie maternité dans ma mutuelle. Six ans. Ma conseillère l'a trouvée en trois minutes quand je lui ai demandé d'éplucher mon contrat avec moi."
+        <cite>— Une lectrice de Bordeaux, après avoir suivi notre guide</cite>
+      </div>
+
+      <p class="ed-text">Ce témoignage, nous l'avons reçu en avril. Il résume à lui seul pourquoi cette lettre existe. Non pas pour vous alarmer — mais pour vous donner les outils de comprendre ce que vous signez, ce que vous payez, et ce à quoi vous avez droit.</p>
+
+      <p class="ed-text">Ce numéro de juin est conçu autour d'une idée simple : <strong>l'été, c'est le bon moment pour sortir votre contrat du tiroir</strong>. Pas pour le changer nécessairement — mais pour savoir ce qu'il contient vraiment. Vous serez souvent surpris, parfois agréablement.</p>
+
+      <div class="ed-sign">
+        <div class="ed-sign-av">✍️</div>
+        <div>
+          <div class="ed-sign-name">Marie Fontaine</div>
+          <div class="ed-sign-role">Journaliste indépendante · AssurancesNet.fr</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DENTAIRE -->
+    <div class="nl-section" id="dentaire">
+      <span class="section-tag st-amber">Mutuelle · Dentaire</span>
+      <div class="section-title">Les 5 meilleures mutuelles pour vos prothèses dentaires en 2026</div>
+      <p class="section-text">Les prothèses dentaires restent l'un des postes les plus coûteux pour les seniors — entre 800€ et 1 500€ par couronne hors 100% Santé. Le remboursement dépend entièrement de votre niveau de garantie. Voici notre sélection vérifiée.</p>
+
+      <div class="alert-nl">
+        <strong>⚠️ Attention aux pourcentages trompeurs.</strong> Un "550% du BRSS" ne signifie pas que la mutuelle rembourse 550% du coût réel. Le BRSS de référence pour une couronne est très bas (~107€). Ce qui compte, c'est le <strong>montant en euros remboursé par an</strong>.
+      </div>
+
+      <div class="mutuelle-mini">
+        <a href="https://www.april.fr/mutuelle-sante" target="_blank" rel="nofollow noopener" class="mm mm-star">
+          <div class="mm-rank rank-1">1</div>
+          <div class="mm-info"><div class="mm-name">April</div><div class="mm-detail">Jusqu'à 1 650€/an · 550% BRSS · Formule premium</div></div>
+          <span class="mm-pct">550%</span>
+          <span class="mm-btn">Devis →</span>
+        </a>
+        <a href="https://www.apicil.com/particuliers/sante" target="_blank" rel="nofollow noopener" class="mm">
+          <div class="mm-rank rank-2">2</div>
+          <div class="mm-info"><div class="mm-name">Apicil</div><div class="mm-detail">1 400€/an · 500% BRSS · Forfait implants inclus</div></div>
+          <span class="mm-pct">500%</span>
+          <span class="mm-btn">Devis →</span>
+        </a>
+        <a href="https://www.malakoffhumanis.com/particuliers/sante" target="_blank" rel="nofollow noopener" class="mm">
+          <div class="mm-rank rank-3">3</div>
+          <div class="mm-info"><div class="mm-name">Malakoff Humanis</div><div class="mm-detail">1 300€/an · Réseau Kalixia · Gel tarifaire 2026</div></div>
+          <span class="mm-pct">450%</span>
+          <span class="mm-btn">Devis →</span>
+        </a>
+      </div>
+
+      <a href="https://assurancesnet.fr/meilleure-mutuelle-dentaire-senior/" class="cta-naturel">
+        Voir le comparatif complet des 10 mutuelles →
+      </a>
+    </div>
+
+    <!-- CURES THERMALES -->
+    <div class="nl-section" id="thermales">
+      <span class="section-tag st-blue">Cures thermales · Actualité 2026</span>
+      <div class="section-title">Cures thermales : la réforme qui a failli tout changer</div>
+      <p class="section-text">Le projet de loi de financement de la Sécurité sociale pour 2026 prévoyait de réduire le remboursement des cures de <strong>65% à 15%</strong>. Concrètement : votre reste à charge aurait bondi de plusieurs centaines d'euros. La mesure n'a finalement pas été adoptée — mais la question reste ouverte pour 2027.</p>
+      <p class="section-text">Ce que ça signifie pour vous dès maintenant : vérifiez que votre mutuelle couvre bien le forfait hébergement et transport de votre cure thermale. C'est souvent le poste le plus coûteux (600€ à 1 800€) et le moins bien couvert.</p>
+
+      <div class="practical-list">
+        <div class="practical-list-title">Ce que doit couvrir votre mutuelle pour une cure thermale</div>
+        <ul>
+          <li>Le forfait thermal (soins médicaux) — la Sécu couvre 97,50€, votre mutuelle complète</li>
+          <li>Les frais de transport et d'hébergement — cherchez un forfait annuel en euros (pas juste %BRSS)</li>
+          <li>Les soins de confort et compléments tarifaires — souvent à la charge du curiste</li>
+          <li>Les consultations médicales obligatoires (3 minimum sur 18 jours)</li>
+        </ul>
+      </div>
+
+      <a href="https://assurancesnet.fr/cures-thermales-2026-remboursement-mutuelle/" class="cta-naturel">
+        Lire notre guide complet + quiz mutuelles thermales →
+      </a>
+    </div>
+
+    <!-- CONSEIL PRATIQUE -->
+    <div class="nl-section" id="conseil">
+      <span class="section-tag st-warm">Conseil pratique du mois</span>
+      <div class="section-title">5 choses à vérifier dans votre contrat avant l'été</div>
+      <p class="section-text">Vous avez du temps libre en juin ? C'est le moment idéal pour sortir votre contrat du tiroir. Ça prend vingt minutes — et ça peut éviter de mauvaises surprises en plein mois d'août.</p>
+
+      <div class="practical-list">
+        <ul>
+          <li><strong>Votre plafond optique annuel</strong> — a-t-il été atteint ? Votre opticien peut vous le dire en deux minutes.</li>
+          <li><strong>La garantie dentaire</strong> — prothèses, couronnes, parodonte : vérifiez le plafond annuel en euros, pas juste le pourcentage.</li>
+          <li><strong>Les médecines douces</strong> — ostéopathie, sophrologie, naturopathie : certains contrats ont un forfait annuel que vous n'avez peut-être jamais utilisé.</li>
+          <li><strong>La cure thermale</strong> — hébergement et transport sont-ils couverts ? À quel montant ?</li>
+          <li><strong>La date d'échéance</strong> — si vous souhaitez changer, la loi vous autorise à résilier à tout moment après 12 mois, sans frais.</li>
+        </ul>
+      </div>
+
+      <a href="https://assurancesnet.fr/calculateur-mutuelle-senior/" class="cta-naturel">
+        Utiliser notre calculateur mutuelle gratuit →
+      </a>
+    </div>
+
+    <!-- BIEN-ÊTRE -->
+    <div class="nl-section" id="bienetre">
+      <span class="section-tag st-green">Bien-être & Autonomie</span>
+      <div class="section-title">Marcher en conscience : ce que la science dit vraiment</div>
+      <p class="section-text">On vous a probablement déjà dit que trente minutes de marche par jour font des miracles. C'est vrai. Ce qu'on vous dit moins souvent, c'est que <strong>la qualité de cette marche compte autant que sa durée.</strong></p>
+
+      <div class="wellness-box">
+        <div class="wb-icon">🌳</div>
+        <div class="wb-title">Le bénéfice d'un parc, d'une forêt, d'un square arboré</div>
+        <div class="wb-text">Des chercheurs ont montré que les promenades en environnement naturel réduisent significativement le stress et améliorent la qualité du sommeil — sur des indicateurs mesurables, sur des personnes de tous âges. Ce n'est pas de la poésie. Si vous marchez déjà, essayez de varier votre itinéraire une fois par semaine. Et si vous n'avez pas encore d'habitude de marche ? Commencez par dix minutes. Juste dix.</div>
+      </div>
+
+      <p class="section-text" style="font-size:13px;color:var(--muted);font-style:italic;margin-top:8px">La constance bat toujours l'exploit ponctuel.</p>
+    </div>
+
+    <!-- FORWARD -->
+    <div class="nl-forward">
+      <div class="nl-forward-text">Cette lettre vous a été utile ? Partagez-la à un proche qui pourrait en avoir besoin.</div>
+      <a href="https://assurancesnet.fr/newsletter/" class="nl-forward-btn">S'abonner gratuitement →</a>
+    </div>
+
+  </div><!-- /nl-body -->
+
+  <!-- ── FOOTER ── -->
+  <div class="nl-footer">
+    <div class="nlf-logo">🌿 AssurancesNet.fr</div>
+    <div class="nlf-text">
+      Éditeur indépendant · Non courtier en assurance · Aucune donnée personnelle collectée<br>
+      Les liens de cette lettre sont des liens d'affiliation. Nous percevons une commission si vous souscrivez, sans coût supplémentaire pour vous.
+    </div>
+    <div class="nlf-links">
+      <a href="https://assurancesnet.fr/" class="nlf-link">Site web</a>
+      <a href="https://assurancesnet.fr/mutuelle-senior-medecines-douces/" class="nlf-link">Mutuelles</a>
+      <a href="https://assurancesnet.fr/meilleur-appareil-auditif/" class="nlf-link">Auditif</a>
+      <a href="https://assurancesnet.fr/meilleur-test-microbiote/" class="nlf-link">Microbiote</a>
+      <a href="https://assurancesnet.fr/mentions-legales/" class="nlf-link">Mentions légales</a>
+    </div>
+    <div class="nlf-unsub">Vous recevez cette lettre car vous vous êtes abonné sur AssurancesNet.fr · <a href="#" style="color:rgba(255,255,255,.25);text-decoration:underline">Se désabonner</a></div>
+  </div>
+
+</div><!-- /email-wrap -->
+
+</body>
+</html>
