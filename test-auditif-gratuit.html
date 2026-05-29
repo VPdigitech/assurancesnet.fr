@@ -4,1353 +4,702 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Test Auditif Gratuit en Ligne 🏆 — AssurancesNet.fr</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Test auditif gratuit en ligne. Sons réels, résultat personnalisé noté sur 10, orientation vers un audioprothésiste si besoin. Aucune donnée collectée.">
+<link rel="canonical" href="https://assurancesnet.fr/test-auditif-gratuit">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f5f3ee;--surf:#fff;--surf2:#eceae4;--brd:#dedad2;
+  --ink:#18150f;--mut:#7a736a;--mut2:#a89e95;
+  --grm:#2a6349;--grl:#d2eddc;
+  --am:#b86e00;--aml:#fdf0d5;
+  --bl:#1a5e8a;--bll:#daeaf6;
+  --re:#c0392b;--rel:#fce8e6;
+  --or:#d4500a;--orl:#fef0e6;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;margin:0}
 
-:root {
-  --bg: #f4f2ed;
-  --surface: #ffffff;
-  --surface2: #eceae4;
-  --border: #dedad2;
-  --ink: #1a1714;
-  --muted: #7a736a;
-  --muted2: #a89e95;
-  --green: #1e5c3f;
-  --green-mid: #2d6a4f;
-  --green-bright: #3fb950;
-  --green-light: #d4eddf;
-  --teal: #0d5c6e;
-  --teal-light: #e0f2f7;
-  --amber: #c47a00;
-  --amber-light: #fdf0d5;
-  --red: #c0392b;
-  --red-light: #fde8e6;
-  --gold: #d4860a;
-}
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--brd);height:60px}
+.nav-in{max-width:860px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:100%}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#1e5438,#3d8a5f);display:flex;align-items:center;justify-content:center;font-size:16px}
+.logo-text{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--ink)}
+.logo-text em{font-style:normal;color:var(--grm)}
+.nav-back{font-size:13px;color:var(--mut);text-decoration:none;padding:8px 14px;border-radius:8px;background:var(--surf2)}
 
-html { scroll-behavior: smooth; }
+/* WRAP */
+.wrap{max-width:680px;margin:0 auto;padding:32px 20px 80px}
 
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'Outfit', sans-serif;
-  font-size: 15px;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-}
+/* BREADCRUMB */
+.bc{display:flex;gap:6px;font-size:12px;color:var(--mut2);margin-bottom:20px;flex-wrap:wrap}
+.bc a{color:var(--mut);text-decoration:none}
 
-/* ── NAV ── */
-.nav {
-  position: sticky; top: 0; z-index: 200;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  height: 60px;
-}
-.nav-in {
-  max-width: 1100px; margin: 0 auto; padding: 0 28px;
-  display: flex; align-items: center; justify-content: space-between; height: 100%;
-}
-.nav-logo {
-  display: flex; align-items: center; gap: 10px;
-  text-decoration: none;
-}
-.nav-logo-icon {
-  width: 34px; height: 34px; border-radius: 9px;
-  background: linear-gradient(135deg, var(--green), #3d8a5f);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px;
-}
-.nav-logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 19px; font-weight: 700; color: var(--ink);
-}
-.nav-logo-text span { color: var(--green-mid); }
-.nav-links { display: flex; align-items: center; gap: 4px; }
-.nav-link {
-  font-size: 13px; font-weight: 500; color: var(--muted);
-  text-decoration: none; padding: 6px 12px; border-radius: 7px;
-  transition: all .15s;
-}
-.nav-link:hover { color: var(--ink); background: var(--surface2); }
-.nav-cta {
-  background: var(--green-mid); color: white;
-  font-size: 13px; font-weight: 600; padding: 8px 18px;
-  border-radius: 8px; text-decoration: none; transition: all .2s;
-  box-shadow: 0 2px 10px rgba(45,106,79,.25);
-}
-.nav-cta:hover { background: var(--green); transform: translateY(-1px); }
+/* HEADER */
+.kicker{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--grm);margin-bottom:8px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,5vw,38px);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:12px}
+.lead{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:20px;border-left:4px solid var(--grm);padding-left:14px;font-style:italic}
 
-/* ── HERO ── */
-.hero {
-  background: linear-gradient(135deg, #0d2318 0%, #0e3528 40%, #0d4a38 100%);
-  min-height: 560px;
-  position: relative; overflow: hidden;
-  display: flex; align-items: center;
-}
+/* DISCLAIMER */
+.disclaimer{background:var(--orl);border:1px solid rgba(212,80,10,.2);border-left:4px solid var(--or);border-radius:10px;padding:12px 16px;font-size:13px;color:#7a3000;line-height:1.65;margin-bottom:24px}
 
-/* Motif de points style AudiGuide */
-.hero-dots {
-  position: absolute; inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 28px 28px;
-  mask-image: radial-gradient(ellipse at 30% 50%, black 20%, transparent 70%);
-}
+/* TEST CARD */
+.test-card{background:var(--surf);border:1.5px solid var(--brd);border-radius:20px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.07)}
 
-.hero-glow {
-  position: absolute; top: -100px; left: -80px;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(45,106,79,.3) 0%, transparent 65%);
-  pointer-events: none;
-}
+/* Header test */
+.test-header{background:linear-gradient(135deg,#0c1f12,#0e3528);padding:24px 28px;position:relative;overflow:hidden}
+.th-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);background-size:22px 22px}
+.th-in{position:relative;z-index:1}
+.th-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.th-tag{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#38c96a;display:flex;align-items:center;gap:7px}
+.th-dot{width:6px;height:6px;border-radius:50%;background:#38c96a;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+.th-step{font-size:12px;color:rgba(255,255,255,.4)}
+.th-prog-lbl{display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.35);margin-bottom:5px}
+.th-prog{height:4px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
+.th-prog-fill{height:100%;background:linear-gradient(90deg,#38c96a,#f0a500);border-radius:2px;transition:width .4s cubic-bezier(.4,0,.2,1)}
 
-.hero-in {
-  max-width: 1100px; margin: 0 auto; padding: 64px 28px;
-  display: grid; grid-template-columns: 1fr 440px; gap: 48px;
-  align-items: center; width: 100%; position: relative; z-index: 1;
-}
-
-@media (max-width: 860px) {
-  .hero-in { grid-template-columns: 1fr; gap: 36px; }
-  .hero-stats { order: -1; }
-}
-
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(63,185,80,.12); border: 1px solid rgba(63,185,80,.3);
-  padding: 5px 14px; border-radius: 99px;
-  font-size: 11px; font-weight: 700; color: #3fb950;
-  letter-spacing: .1em; text-transform: uppercase; margin-bottom: 22px;
-}
-.hero-badge-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: #3fb950; animation: blink 2s infinite;
-}
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
-
-.hero h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(32px, 4.5vw, 54px);
-  font-weight: 700; line-height: 1.06;
-  color: white; margin-bottom: 18px;
-}
-.hero h1 em { font-style: italic; color: #4dd886; }
-
-.hero-desc {
-  font-size: 15px; color: rgba(255,255,255,.55);
-  font-weight: 300; line-height: 1.7;
-  max-width: 480px; margin-bottom: 30px;
-}
-
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
-
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: #f5a623; color: #1a0f00;
-  font-weight: 700; font-size: 14px;
-  padding: 13px 24px; border-radius: 10px;
-  text-decoration: none; border: none; cursor: pointer;
-  transition: all .2s; box-shadow: 0 4px 18px rgba(245,166,35,.35);
-}
-.btn-primary:hover { background: #ffb733; transform: translateY(-2px); box-shadow: 0 6px 22px rgba(245,166,35,.45); }
-
-.btn-secondary {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,.08); color: rgba(255,255,255,.8);
-  font-weight: 500; font-size: 14px;
-  padding: 13px 22px; border-radius: 10px;
-  text-decoration: none; border: 1px solid rgba(255,255,255,.15);
-  cursor: pointer; transition: all .2s;
-}
-.btn-secondary:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.25); }
-
-.hero-checks {
-  display: flex; gap: 18px; flex-wrap: wrap;
-  font-size: 12px; color: rgba(255,255,255,.45);
-}
-.hero-check { display: flex; align-items: center; gap: 6px; }
-.hero-check::before { content: '✓'; color: #3fb950; font-weight: 700; }
-
-/* Stats card */
-.hero-stats {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.1);
-  backdrop-filter: blur(8px);
-  border-radius: 18px; padding: 28px;
-}
-.stats-title {
-  font-size: 13px; font-weight: 600; color: rgba(255,255,255,.6);
-  margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
-}
-.stats-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-  background: rgba(255,255,255,.08); border-radius: 12px; overflow: hidden;
-}
-.stat-cell {
-  background: rgba(20,40,30,.6);
-  padding: 20px 16px; text-align: center;
-}
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 36px; font-weight: 700; line-height: 1;
-  color: #f5a623; margin-bottom: 6px;
-}
-.stat-label { font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.4; }
-
-/* ── SECTION TEST ── */
-.section-test {
-  max-width: 820px; margin: 0 auto;
-  padding: 72px 28px;
-}
-
-.section-label {
-  text-align: center;
-  font-size: 11px; font-weight: 700; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--green-mid);
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 4vw, 42px); font-weight: 700;
-  text-align: center; color: var(--ink);
-  margin-bottom: 8px; line-height: 1.1;
-}
-
-.section-sub {
-  text-align: center; font-size: 14px; color: var(--muted);
-  max-width: 520px; margin: 0 auto 48px; line-height: 1.65;
-}
-
-/* ── DISCLAIMER ── */
-.disclaimer {
-  background: var(--amber-light);
-  border: 1px solid rgba(196,122,0,.25);
-  border-left: 4px solid var(--amber);
-  border-radius: 10px; padding: 12px 18px;
-  font-size: 12.5px; color: #7a5200; line-height: 1.65;
-  margin-bottom: 28px;
-  display: flex; gap: 10px; align-items: flex-start;
-}
-
-/* ── QUIZ CARD ── */
-.quiz-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 22px; overflow: hidden;
-  box-shadow: 0 8px 48px rgba(0,0,0,.07);
-}
-
-.quiz-header {
-  background: linear-gradient(135deg, #0d2318, #0e3528);
-  padding: 28px 32px 24px; position: relative; overflow: hidden;
-}
-.quiz-header-dots {
-  position: absolute; inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.quiz-header-inner { position: relative; z-index: 1; }
-.quiz-header-top {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 14px;
-}
-.quiz-header-tag {
-  font-size: 10px; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase; color: #3fb950;
-  display: flex; align-items: center; gap: 7px;
-}
-.quiz-step-label {
-  font-size: 12px; color: rgba(255,255,255,.4); font-weight: 500;
-}
-
-/* Progress */
-.progress-track {
-  height: 4px; background: rgba(255,255,255,.1);
-  border-radius: 2px; overflow: hidden;
-}
-.progress-fill {
-  height: 100%; border-radius: 2px;
-  background: linear-gradient(90deg, #3fb950, #f5a623);
-  transition: width .4s cubic-bezier(.4,0,.2,1);
-}
-
-/* ── QUIZ BODY ── */
-.quiz-body { padding: 36px 36px 32px; }
-
-@media (max-width: 560px) { .quiz-body { padding: 24px 20px 24px; } }
+/* Corps du test */
+.test-body{padding:28px}
+@media(max-width:480px){.test-body{padding:20px 16px}}
 
 /* Écran intro */
-.intro-screen { text-align: center; }
-.intro-icon { font-size: 56px; margin-bottom: 20px; }
-.intro-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(22px, 3vw, 30px); font-weight: 700;
-  color: var(--ink); margin-bottom: 12px; line-height: 1.2;
-}
-.intro-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
-.intro-chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
-.intro-chip {
-  font-size: 12px; padding: 5px 13px;
-  background: var(--surface2); border-radius: 99px; color: var(--muted);
-}
+.intro{text-align:center}
+.intro-icon{font-size:56px;margin-bottom:16px}
+.intro-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,28px);font-weight:700;color:var(--ink);margin-bottom:10px}
+.intro-desc{font-size:14px;color:var(--mut);line-height:1.7;margin-bottom:22px}
+.intro-chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.chip{font-size:12px;padding:5px 13px;background:var(--surf2);border-radius:99px;color:var(--mut)}
+.headphones-note{background:var(--aml);border:1px solid rgba(184,110,0,.2);border-radius:10px;padding:12px 16px;font-size:13px;color:#7a4800;line-height:1.65;margin-bottom:24px;text-align:left}
 
-/* Question */
-.why-note {
-  font-size: 12px; color: var(--muted);
-  background: var(--surface2); border-radius: 8px;
-  padding: 8px 14px; margin-bottom: 20px;
-  border-left: 3px solid var(--green-mid);
-  display: flex; gap: 8px; align-items: flex-start;
-}
-.q-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 2.5vw, 27px); font-weight: 700;
-  color: var(--ink); margin-bottom: 22px; line-height: 1.25;
-}
-.options { display: flex; flex-direction: column; gap: 10px; }
-.option-btn {
-  width: 100%; text-align: left; cursor: pointer;
-  background: var(--surface); border: 1.5px solid var(--border);
-  border-radius: 13px; padding: 14px 18px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 14px; font-weight: 500; color: var(--ink);
-  transition: all .2s; display: flex; align-items: center; gap: 12px;
-}
-.option-btn:hover {
-  border-color: var(--green-mid);
-  background: #f0f9f4;
-  transform: translateX(4px);
-}
-.option-btn.selected {
-  border-color: var(--green-mid);
-  background: linear-gradient(90deg, #e8f5ee, #f4fbf7);
-}
-.option-radio {
-  width: 22px; height: 22px; border-radius: 50%;
-  border: 2px solid var(--border); flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  transition: all .2s;
-}
-.option-btn.selected .option-radio {
-  background: var(--green-mid); border-color: var(--green-mid);
-}
-.option-radio-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: white; opacity: 0; transition: opacity .2s;
-}
-.option-btn.selected .option-radio-dot { opacity: 1; }
-.option-sub { font-size: 12px; color: var(--muted); font-weight: 400; }
-.option-emoji { font-size: 18px; flex-shrink: 0; }
+/* Questions texte */
+.q-why{font-size:12px;color:var(--mut);background:var(--surf2);border-left:3px solid var(--grm);border-radius:0 8px 8px 0;padding:8px 12px;margin-bottom:16px;line-height:1.6}
+.q-title{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,3vw,24px);font-weight:700;color:var(--ink);margin-bottom:18px;line-height:1.3}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{width:100%;text-align:left;background:var(--surf);border:1.5px solid var(--brd);border-radius:12px;padding:14px 16px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:12px}
+.opt:hover,.opt:active{border-color:var(--grm);background:#f2fbf5;transform:translateX(3px)}
+.opt.sel{border-color:var(--grm);background:linear-gradient(90deg,#e8f5ee,#f4fbf7)}
+.opt-radio{width:22px;height:22px;border-radius:50%;border:2px solid var(--brd);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .18s}
+.opt.sel .opt-radio{background:var(--grm);border-color:var(--grm)}
+.opt-dot{width:8px;height:8px;border-radius:50%;background:white;opacity:0;transition:opacity .18s}
+.opt.sel .opt-dot{opacity:1}
+.opt-emoji{font-size:20px;flex-shrink:0}
+.opt-sub{font-size:12px;color:var(--mut);font-weight:400;display:block;margin-top:2px}
+
+/* Test sonore */
+.sound-test{text-align:center}
+.sound-title{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,3vw,24px);font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.3}
+.sound-desc{font-size:13.5px;color:var(--mut);margin-bottom:24px;line-height:1.65}
+.sound-freq{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grm);margin-bottom:16px}
+.play-btn{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--grm),#3d8a5f);border:none;cursor:pointer;font-size:34px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:all .22s;box-shadow:0 4px 20px rgba(42,99,73,.35)}
+.play-btn:hover,.play-btn:active{transform:scale(1.08);box-shadow:0 6px 28px rgba(42,99,73,.45)}
+.play-btn.playing{background:linear-gradient(135deg,#1a8a5f,#25a870);animation:pulse-ring 1.5s ease infinite}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(42,99,73,.4)}70%{box-shadow:0 0 0 16px rgba(42,99,73,0)}100%{box-shadow:0 0 0 0 rgba(42,99,73,0)}}
+.play-hint{font-size:13px;color:var(--mut);margin-bottom:24px}
+.sound-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px}
+.sopt{padding:14px 12px;border-radius:12px;border:1.5px solid var(--brd);cursor:pointer;background:var(--surf);font-family:'Outfit',sans-serif;font-size:13.5px;font-weight:500;color:var(--ink);transition:all .18s;text-align:center;line-height:1.4}
+.sopt:hover,.sopt:active{border-color:var(--grm);background:#f2fbf5}
+.sopt.sel{border-color:var(--grm);background:linear-gradient(135deg,#e8f5ee,#f4fbf7)}
+.sopt.sel-red{border-color:var(--re);background:var(--rel)}
+.volume-wrap{margin:16px 0 20px}
+.volume-label{font-size:12px;color:var(--mut);margin-bottom:8px;display:flex;justify-content:space-between}
+.volume-slider{width:100%;height:8px;border-radius:4px;appearance:none;-webkit-appearance:none;background:linear-gradient(90deg,var(--grm) var(--vol,50%),var(--brd) var(--vol,50%));outline:none;cursor:pointer}
+.volume-slider::-webkit-slider-thumb{appearance:none;width:22px;height:22px;border-radius:50%;background:var(--grm);cursor:pointer;box-shadow:0 2px 8px rgba(42,99,73,.35)}
 
 /* Navigation */
-.quiz-nav {
-  display: flex; justify-content: space-between; align-items: center;
-  margin-top: 26px;
-}
-.btn-back {
-  background: none; border: none; cursor: pointer;
-  font-size: 13px; color: var(--muted); padding: 8px 0;
-  display: flex; align-items: center; gap: 5px;
-  font-family: 'Outfit', sans-serif;
-  transition: color .15s;
-}
-.btn-back:hover { color: var(--ink); }
-.btn-next {
-  background: var(--green-mid); color: white;
-  border: none; border-radius: 10px;
-  padding: 12px 28px; font-size: 14px; font-weight: 600;
-  cursor: pointer; font-family: 'Outfit', sans-serif;
-  transition: all .2s;
-  box-shadow: 0 3px 14px rgba(45,106,79,.3);
-}
-.btn-next:hover { background: var(--green); transform: translateY(-1px); }
-.btn-next:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; transform: none; box-shadow: none; }
+.test-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px}
+.btn-back{background:none;border:none;cursor:pointer;font-size:14px;color:var(--mut);padding:10px 0;display:flex;align-items:center;gap:5px;font-family:'Outfit',sans-serif;transition:color .15s}
+.btn-back:hover{color:var(--ink)}
+.btn-next{background:var(--grm);color:white;border:none;border-radius:10px;padding:13px 28px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;box-shadow:0 3px 12px rgba(42,99,73,.28)}
+.btn-next:hover{background:#1e5438;transform:translateY(-1px)}
+.btn-next:disabled{background:var(--brd);color:var(--mut);cursor:not-allowed;transform:none;box-shadow:none}
+.btn-start{background:#f0a500;color:#1a0e00;border:none;border-radius:12px;padding:15px 36px;font-size:16px;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .22s;box-shadow:0 4px 18px rgba(240,165,0,.35);display:inline-flex;align-items:center;gap:8px}
+.btn-start:hover,.btn-start:active{background:#ffb520;transform:translateY(-2px)}
 
-/* ── RÉSULTAT ── */
-.result-screen { animation: fadeUp .5s ease both; }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+/* RÉSULTAT */
+.result{animation:fadeUp .5s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
-.result-banner {
-  border-radius: 16px; padding: 28px; margin-bottom: 24px;
-  text-align: center;
-}
-.result-icon { font-size: 52px; margin-bottom: 14px; }
-.result-pill {
-  display: inline-block;
-  font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  padding: 3px 12px; border-radius: 99px; margin-bottom: 12px; color: white;
-}
-.result-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 2.5vw, 26px); font-weight: 700;
-  color: var(--ink); margin-bottom: 10px;
-}
-.result-text { font-size: 13.5px; color: var(--muted); line-height: 1.75; max-width: 540px; margin: 0 auto; }
+/* Score gauge */
+.score-gauge{text-align:center;margin-bottom:24px}
+.gauge-circle{width:140px;height:140px;margin:0 auto 16px;position:relative}
+.gauge-svg{width:140px;height:140px;transform:rotate(-90deg)}
+.gauge-bg{fill:none;stroke:#eceae4;stroke-width:12}
+.gauge-fill{fill:none;stroke-width:12;stroke-linecap:round;transition:stroke-dashoffset 1.5s cubic-bezier(.4,0,.2,1)}
+.gauge-score{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.gauge-num{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;line-height:1}
+.gauge-label{font-size:12px;color:var(--mut);margin-top:2px}
+.result-level{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border-radius:99px;color:white;margin-bottom:12px}
+.result-title{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,26px);font-weight:700;color:var(--ink);margin-bottom:10px}
+.result-text{font-size:14px;color:var(--mut);line-height:1.75;margin-bottom:20px}
 
-/* Score bars */
-.score-bars { margin: 20px 0; }
-.score-bar-item { margin-bottom: 10px; }
-.score-bar-label {
-  display: flex; justify-content: space-between;
-  font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 5px;
-}
-.score-bar-track { height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
-.score-bar-fill { height: 100%; border-radius: 3px; transition: width 1s cubic-bezier(.4,0,.2,1); }
+/* Score bars détail */
+.score-bars{margin:16px 0 24px}
+.sbar{margin-bottom:10px}
+.sbar-top{display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:var(--mut);margin-bottom:5px}
+.sbar-track{height:7px;background:var(--surf2);border-radius:4px;overflow:hidden}
+.sbar-fill{height:100%;border-radius:4px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
 
 /* CTAs résultat */
-.result-ctas { display: flex; gap: 10px; flex-wrap: wrap; }
-.cta-main {
-  flex: 1; min-width: 200px;
-  display: flex; align-items: center; justify-content: center;
-  padding: 14px 22px; border-radius: 11px;
-  font-size: 14px; font-weight: 600; text-decoration: none;
-  transition: all .2s; text-align: center;
-}
-.cta-secondary {
-  flex: 1; min-width: 180px;
-  display: flex; align-items: center; justify-content: center;
-  padding: 14px 20px; border-radius: 11px;
-  font-size: 13.5px; font-weight: 500; text-decoration: none;
-  background: var(--surface); border: 1.5px solid var(--border);
-  color: var(--ink); transition: all .2s; text-align: center;
-}
-.cta-secondary:hover { border-color: var(--green-mid); background: var(--green-light); }
+.result-ctas{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.cta-main{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 20px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;transition:all .22s;text-align:center;color:white}
+.cta-main:hover,.cta-main:active{transform:translateY(-2px)}
+.cta-sec{display:flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;font-size:14px;font-weight:500;text-decoration:none;background:var(--surf);border:1.5px solid var(--brd);color:var(--ink);transition:all .2s;text-align:center}
+.cta-sec:hover{border-color:var(--grm);background:var(--grl)}
 
-/* Email option */
-.email-opt {
-  margin-top: 24px; padding: 18px 20px;
-  background: var(--surface2); border-radius: 12px;
-  border: 1px dashed var(--border);
-}
-.email-opt p { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
-.email-row { display: flex; gap: 8px; flex-wrap: wrap; }
-.email-input {
-  flex: 1; min-width: 180px; padding: 10px 14px;
-  border: 1.5px solid var(--border); border-radius: 8px;
-  font-size: 13.5px; font-family: 'Outfit', sans-serif;
-  outline: none; transition: border-color .15s;
-  background: white;
-}
-.email-input:focus { border-color: var(--green-mid); }
-.email-submit {
-  background: var(--ink); color: white;
-  border: none; border-radius: 8px; padding: 10px 18px;
-  font-size: 13px; font-weight: 600; cursor: pointer;
-  font-family: 'Outfit', sans-serif; white-space: nowrap; transition: background .15s;
-}
-.email-submit:hover { background: #2d2620; }
-.email-gdpr { font-size: 10.5px; color: var(--muted2); margin-top: 8px; }
+/* Email opt */
+.email-opt{background:var(--surf2);border-radius:12px;padding:18px 20px;border:1px dashed var(--brd);margin-bottom:16px}
+.email-opt p{font-size:13.5px;color:var(--mut);margin-bottom:12px;line-height:1.6}
+.email-row{display:flex;gap:8px;flex-wrap:wrap}
+.email-in{flex:1;min-width:180px;padding:11px 14px;border:1.5px solid var(--brd);border-radius:9px;font-size:14px;font-family:'Outfit',sans-serif;outline:none;transition:border-color .15s;background:white}
+.email-in:focus{border-color:var(--grm)}
+.email-sub{background:var(--ink);color:white;border:none;border-radius:9px;padding:11px 18px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:background .15s}
+.email-sub:hover{background:#2d2620}
+.gdpr{font-size:11px;color:var(--mut2);margin-top:8px}
+.restart-btn{background:none;border:none;font-size:13px;color:var(--mut);cursor:pointer;font-family:'Outfit',sans-serif;text-decoration:underline;display:block;margin:0 auto;padding:8px}
 
-.restart-link {
-  text-align: center; margin-top: 18px;
-  font-size: 13px; color: var(--muted); cursor: pointer;
-  background: none; border: none; font-family: 'Outfit', sans-serif;
-  text-decoration: underline;
-}
+/* Spécialistes */
+.specialists{margin-top:24px;padding-top:20px;border-top:1px solid var(--brd)}
+.spec-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--ink);margin-bottom:14px}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:420px){.spec-grid{grid-template-columns:1fr}}
+.spec-card{background:var(--surf);border:1.5px solid var(--brd);border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:block;transition:all .18s}
+.spec-card:hover,.spec-card:active{border-color:var(--grm);transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.07)}
+.spec-icon{font-size:26px;margin-bottom:8px}
+.spec-name{font-weight:700;font-size:14px;color:var(--ink);margin-bottom:3px}
+.spec-desc{font-size:12px;color:var(--mut);line-height:1.5}
+.spec-action{font-size:12px;font-weight:600;color:var(--grm);margin-top:8px;display:flex;align-items:center;gap:4px}
 
-/* ── SECTION PRODUITS ── */
-.section-products {
-  background: white; padding: 72px 28px;
-  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-}
-.products-inner { max-width: 1100px; margin: 0 auto; }
-.products-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 18px; margin-top: 40px;
-}
-
-.product-card {
-  background: var(--bg); border: 1.5px solid var(--border);
-  border-radius: 18px; overflow: hidden;
-  transition: all .22s; position: relative;
-}
-.product-card:hover {
-  border-color: var(--green-mid);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(0,0,0,.09);
-}
-.product-card.featured { border-color: var(--green-mid); background: #f2fbf5; }
-
-.product-badge {
-  position: absolute; top: 14px; left: 14px;
-  font-size: 10px; font-weight: 700; letter-spacing: .08em;
-  text-transform: uppercase; padding: 4px 10px; border-radius: 6px;
-}
-.badge-choice { background: var(--green-mid); color: white; }
-.badge-discount { background: #e63946; color: white; }
-.badge-new { background: var(--amber); color: white; }
-
-.product-img {
-  height: 160px; display: flex; align-items: center; justify-content: center;
-  font-size: 64px; background: white;
-  border-bottom: 1px solid var(--border);
-}
-
-.product-body { padding: 18px 20px; }
-.product-brand {
-  font-size: 10px; font-weight: 700; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--muted2); margin-bottom: 4px;
-}
-.product-name {
-  font-weight: 700; font-size: 15.5px; color: var(--ink);
-  margin-bottom: 8px; line-height: 1.3;
-}
-.product-stars { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
-.stars { color: #f5a623; font-size: 13px; letter-spacing: -1px; }
-.stars-count { font-size: 11.5px; color: var(--muted); }
-.product-features { list-style: none; margin-bottom: 14px; }
-.product-features li {
-  font-size: 12.5px; color: var(--muted); padding: 2px 0;
-  display: flex; gap: 7px; align-items: flex-start;
-}
-.product-features li::before { content: '✓'; color: var(--green-mid); font-weight: 700; flex-shrink: 0; }
-
-.product-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  padding-top: 14px; border-top: 1px solid var(--border);
-}
-.product-price {
-  display: flex; align-items: baseline; gap: 6px;
-}
-.price-main { font-size: 20px; font-weight: 700; color: var(--ink); }
-.price-old { font-size: 13px; color: var(--muted2); text-decoration: line-through; }
-.price-free { font-size: 14px; font-weight: 700; color: var(--green-mid); }
-
-.btn-amazon {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: #f5a623; color: #1a0f00;
-  font-size: 12.5px; font-weight: 700; padding: 8px 16px;
-  border-radius: 8px; text-decoration: none; transition: all .2s;
-}
-.btn-amazon:hover { background: #ffb733; transform: translateY(-1px); }
-
-.btn-cpl {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: var(--green-mid); color: white;
-  font-size: 12.5px; font-weight: 700; padding: 8px 16px;
-  border-radius: 8px; text-decoration: none; transition: all .2s;
-}
-.btn-cpl:hover { background: var(--green); }
-
-/* ── SECTION ARTICLES ── */
-.section-articles { max-width: 1100px; margin: 0 auto; padding: 72px 28px; }
-.articles-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px; margin-top: 40px;
-}
-
-.article-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 16px; overflow: hidden; transition: all .2s;
-  text-decoration: none; display: block; color: inherit;
-}
-.article-card:hover {
-  transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,.08);
-  border-color: var(--green-mid);
-}
-.article-thumb {
-  height: 130px; display: flex; align-items: center; justify-content: center;
-  font-size: 52px;
-}
-.article-thumb-1 { background: linear-gradient(135deg, #0d3028, #0f5040); }
-.article-thumb-2 { background: linear-gradient(135deg, #1a3040, #0d4060); }
-.article-thumb-3 { background: linear-gradient(135deg, #2a1810, #3a2818); }
-
-.article-body { padding: 18px 20px; }
-.article-meta {
-  display: flex; gap: 10px; align-items: center; margin-bottom: 8px;
-  font-size: 11px; color: var(--muted2);
-}
-.article-tag {
-  font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  padding: 2px 8px; border-radius: 4px;
-}
-.tag-test { background: var(--teal-light); color: var(--teal); }
-.tag-comparatif { background: var(--green-light); color: var(--green); }
-.tag-guide { background: var(--amber-light); color: var(--amber); }
-
-.article-title {
-  font-weight: 700; font-size: 15px; color: var(--ink);
-  margin-bottom: 8px; line-height: 1.35;
-}
-.article-excerpt { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
-.article-read {
-  display: flex; align-items: center; gap: 6px;
-  margin-top: 12px; font-size: 12.5px; font-weight: 600; color: var(--green-mid);
-}
-
-/* ── FAQ ── */
-.section-faq { background: var(--ink); padding: 72px 28px; }
-.faq-inner { max-width: 720px; margin: 0 auto; }
-.faq-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(26px, 4vw, 38px); font-weight: 700;
-  color: white; margin-bottom: 8px; text-align: center;
-}
-.faq-sub { font-size: 14px; color: rgba(255,255,255,.45); text-align: center; margin-bottom: 40px; }
-
-.faq-item {
-  border-bottom: 1px solid rgba(255,255,255,.08); overflow: hidden;
-}
-.faq-q {
-  width: 100%; text-align: left; background: none; border: none;
-  padding: 18px 0; cursor: pointer; font-family: 'Outfit', sans-serif;
-  display: flex; justify-content: space-between; align-items: flex-start; gap: 14px;
-}
-.faq-q-text { font-size: 15px; font-weight: 500; color: rgba(255,255,255,.85); line-height: 1.4; }
-.faq-icon {
-  width: 26px; height: 26px; border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,.2);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px; color: rgba(255,255,255,.5); flex-shrink: 0;
-  transition: all .2s;
-}
-.faq-item.open .faq-icon { background: var(--green-mid); border-color: var(--green-mid); color: white; transform: rotate(45deg); }
-.faq-a {
-  font-size: 13.5px; color: rgba(255,255,255,.5); line-height: 1.75;
-  max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s;
-  padding: 0;
-}
-.faq-item.open .faq-a { max-height: 200px; padding: 0 0 18px; }
-
-/* ── FOOTER ── */
-.footer { background: #0d1008; border-top: 1px solid #1e2818; padding: 48px 28px 28px; }
-.footer-in { max-width: 1100px; margin: 0 auto; }
-.footer-top {
-  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 36px;
-  margin-bottom: 36px;
-}
-@media (max-width: 700px) { .footer-top { grid-template-columns: 1fr 1fr; } }
-
-.footer-brand-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px;
-}
-.footer-brand-desc { font-size: 12px; color: rgba(255,255,255,.3); line-height: 1.7; margin-bottom: 14px; }
-.footer-affil {
-  font-size: 11px; color: rgba(255,255,255,.25); line-height: 1.7;
-  background: rgba(255,255,255,.04); border-radius: 8px; padding: 10px 12px;
-  border: 1px solid rgba(255,255,255,.06);
-}
-.footer-col-title {
-  font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
-  color: rgba(255,255,255,.25); margin-bottom: 14px;
-}
-.footer-col a {
-  display: block; font-size: 13px; color: rgba(255,255,255,.4);
-  text-decoration: none; margin-bottom: 8px; transition: color .15s;
-}
-.footer-col a:hover { color: rgba(255,255,255,.7); }
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.06); padding-top: 20px;
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 12px;
-  font-size: 11.5px; color: rgba(255,255,255,.2);
-}
-
-/* ── HIDDEN ── */
-.hidden { display: none !important; }
+.legal{font-size:11.5px;color:var(--mut2);line-height:1.7;padding:16px 0;border-top:1px solid var(--brd);font-style:italic;margin-top:32px}
 </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
 <nav class="nav">
   <div class="nav-in">
-    <a href="/" class="nav-logo">
-      <div class="nav-logo-icon">🌿</div>
-      <span class="nav-logo-text">Assurances<span>Net</span>.fr</span>
-    </a>
-    <div class="nav-links">
-      <a href="#test" class="nav-link">Test auditif</a>
-      <a href="#produits" class="nav-link">Produits</a>
-      <a href="#conseils" class="nav-link">Conseils</a>
-      <a href="#faq" class="nav-link">FAQ</a>
-      <a href="/meilleur-appareil-auditif/" class="nav-cta">Comparer →</a>
-    </div>
+    <a href="/" class="logo"><div class="logo-icon">🌿</div><span class="logo-text">Assurances<em>Net</em>.fr</span></a>
+    <a href="/" class="nav-back">← Accueil</a>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-dots"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-in">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <div class="hero-badge-dot"></div>
-        Guide indépendant 2026
-      </div>
-      <h1>Trouvez l'aide auditive <em>vraiment faite</em> pour vous</h1>
-      <p class="hero-desc">Du test auditif gratuit aux meilleures offres du marché — en 3 minutes, notre simulateur identifie la solution idéale selon votre situation.</p>
-      <div class="hero-btns">
-        <a href="#test" class="btn-primary" onclick="startTest()">
-          👂 Démarrer le test gratuit
-        </a>
-        <a href="#produits" class="btn-secondary">
-          Voir les produits →
-        </a>
-      </div>
-      <div class="hero-checks">
-        <span class="hero-check">Sans ordonnance possible</span>
-        <span class="hero-check">100% Santé expliqué</span>
-        <span class="hero-check">Conseil gratuit & impartial</span>
-        <span class="hero-check">Aucune donnée collectée</span>
-      </div>
-    </div>
+<div class="wrap">
+  <div class="bc"><a href="/">Accueil</a><span>/</span><span>Test auditif gratuit</span></div>
 
-    <div class="hero-stats">
-      <div class="stats-title">🇫🇷 La situation auditive en France</div>
-      <div class="stats-grid">
-        <div class="stat-cell">
-          <div class="stat-num">6M</div>
-          <div class="stat-label">Français concernés par la perte auditive</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-num">37%</div>
-          <div class="stat-label">Restent non appareillés faute d'info</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-num">0€</div>
-          <div class="stat-label">Reste à charge avec 100% Santé (Classe I)</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-num">7 ans</div>
-          <div class="stat-label">Délai moyen avant de consulter un spécialiste</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── SECTION TEST ── -->
-<section class="section-test" id="test">
-  <div class="section-label">Simulateur gratuit</div>
-  <h2 class="section-title">Mini-test auditif indicatif</h2>
-  <p class="section-sub">Répondez à 6 questions pour découvrir la solution la mieux adaptée à votre situation. Aucune donnée personnelle collectée.</p>
+  <div class="kicker">Test auditif · Dépistage · Gratuit</div>
+  <h1>Test auditif gratuit<br><em style="color:#2a6349">en ligne</em></h1>
+  <p class="lead">Un questionnaire de dépistage + des sons réels à écouter. Résultat noté sur 10. Aucune donnée collectée. Ce test ne remplace pas un bilan médical.</p>
 
   <div class="disclaimer">
-    <span>⚕️</span>
-    <span><strong>Information :</strong> Ce questionnaire est un outil de dépistage informatif, similaire à ceux proposés par l'Assurance Maladie. Il ne remplace pas un bilan audiologique réalisé par un professionnel de santé.</span>
+    ⚕️ <strong>Information importante :</strong> Ce test est un outil de dépistage informatif, similaire à ceux proposés par l'Assurance Maladie. Il ne constitue pas un diagnostic médical. Seul un audioprothésiste ou un ORL peut réaliser un vrai bilan auditif.
   </div>
 
-  <div class="quiz-card">
-    <div class="quiz-header">
-      <div class="quiz-header-dots"></div>
-      <div class="quiz-header-inner">
-        <div class="quiz-header-top">
-          <div class="quiz-header-tag">
-            <div class="hero-badge-dot"></div>
-            Test auditif indicatif · Aucune donnée collectée
-          </div>
-          <div class="quiz-step-label" id="stepLabel"></div>
+  <div class="test-card">
+    <div class="test-header">
+      <div class="th-dots"></div>
+      <div class="th-in">
+        <div class="th-top">
+          <div class="th-tag"><div class="th-dot"></div>Test auditif · Sons réels · Anonyme</div>
+          <div class="th-step" id="stepLabel"></div>
         </div>
-        <div class="progress-track">
-          <div class="progress-fill" id="progressFill" style="width:0%"></div>
-        </div>
+        <div class="th-prog-lbl"><span id="progLabel">Démarrer le test</span><span id="progPct"></span></div>
+        <div class="th-prog"><div class="th-prog-fill" id="progFill" style="width:0%"></div></div>
       </div>
     </div>
 
-    <div class="quiz-body" id="quizBody">
-      <!-- ÉCRAN INTRO -->
-      <div id="introScreen" class="intro-screen">
-        <div class="intro-icon">👂</div>
-        <h3 class="intro-title">Évaluez votre audition en 6 questions</h3>
-        <p class="intro-desc">Pas de nom, pas de téléphone, pas d'email obligatoire. Juste vos réponses anonymes pour vous orienter vers la meilleure solution.</p>
-        <div class="intro-chips">
-          <span class="intro-chip">⏱ 2 minutes</span>
-          <span class="intro-chip">🔒 Aucune donnée</span>
-          <span class="intro-chip">🎯 Résultat immédiat</span>
-          <span class="intro-chip">💰 Gratuit</span>
-        </div>
-        <button class="btn-next" onclick="startTest()" style="margin:0 auto;display:block;padding:14px 40px;font-size:15px;">
-          Démarrer le test →
-        </button>
-      </div>
-
-      <!-- ÉCRAN QUESTION -->
-      <div id="questionScreen" class="hidden">
-        <div class="why-note" id="whyNote">
-          <span>💡</span><span id="whyText"></span>
-        </div>
-        <h3 class="q-title" id="qTitle"></h3>
-        <div class="options" id="optionsContainer"></div>
-        <div class="quiz-nav">
-          <button class="btn-back" id="backBtn" onclick="prevStep()">← Précédent</button>
-          <button class="btn-next" id="nextBtn" onclick="nextStep()" disabled>Suivant →</button>
-        </div>
-      </div>
-
-      <!-- ÉCRAN RÉSULTAT -->
-      <div id="resultScreen" class="hidden result-screen">
-        <!-- rempli par JS -->
-      </div>
-    </div>
+    <div class="test-body" id="testBody"></div>
   </div>
-</section>
 
-<!-- ── PRODUITS ── -->
-<section class="section-products" id="produits">
-  <div class="products-inner">
-    <div class="section-label" style="text-align:left">Sélection AssurancesNet</div>
-    <h2 class="section-title" style="text-align:left">Les meilleurs produits auditifs du moment</h2>
-    <p class="section-sub" style="text-align:left;margin-left:0">Testés, comparés, recommandés. Appareils auditifs 100% Santé et alternatives OTC — les meilleures offres actuelles.</p>
+  <div class="legal">ℹ️ AssurancesNet.fr est un site d'information indépendant rémunéré par des commissions d'affiliation. Les liens "Prendre rendez-vous" sont des liens affiliés. Non professionnel de santé. Sources : ameli.fr, has-sante.fr.</div>
+</div>
 
-    <div class="products-grid">
-
-      <div class="product-card featured">
-        <div class="product-badge badge-choice">★ Choix éditeur</div>
-        <div class="product-img">🎧</div>
-        <div class="product-body">
-          <div class="product-brand">Amplifon</div>
-          <div class="product-name">Essentiel Class I — 100% Santé</div>
-          <div class="product-stars">
-            <span class="stars">★★★★★</span>
-            <span class="stars-count">4.8/5 · 1 247 avis</span>
-          </div>
-          <ul class="product-features">
-            <li>Remboursement intégral Sécu + mutuelle</li>
-            <li>700 centres en France</li>
-            <li>Garantie 4 ans incluse</li>
-            <li>Suivi audioprothésiste inclus</li>
-            <li>Essai 30 jours sans engagement</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-free">0€ remboursé</span>
-            </div>
-            <a href="#" class="btn-cpl" rel="nofollow">Prendre RDV →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-badge badge-discount">−22% aujourd'hui</div>
-        <div class="product-img">👂</div>
-        <div class="product-body">
-          <div class="product-brand">Beurer</div>
-          <div class="product-name">HA 20 — Amplificateur Médical Discret</div>
-          <div class="product-stars">
-            <span class="stars">★★★★☆</span>
-            <span class="stars-count">4.3/5 · 3 200 avis</span>
-          </div>
-          <ul class="product-features">
-            <li>Marque médicale allemande certifiée</li>
-            <li>Amplifie jusqu'à +40dB avec clarté</li>
-            <li>Sans ordonnance, livraison 24h</li>
-            <li>Design intra-canal quasi invisible</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-main">89€</span>
-              <span class="price-old">114€</span>
-            </div>
-            <a href="#" class="btn-amazon" rel="nofollow noopener">⚡ Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-badge badge-new">Nouveau</div>
-        <div class="product-img">🔊</div>
-        <div class="product-body">
-          <div class="product-brand">Sony</div>
-          <div class="product-name">CRE-E10 — OTC Self-Fitting Hearing Aid</div>
-          <div class="product-stars">
-            <span class="stars">★★★★☆</span>
-            <span class="stars-count">4.5/5 · 1 800 avis</span>
-          </div>
-          <ul class="product-features">
-            <li>Auto-ajustement via application Sony</li>
-            <li>Format in-ear ultra-discret</li>
-            <li>Technologie Sony "sense engine"</li>
-            <li>Idéal pertes légères à modérées</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-main">199€</span>
-              <span class="price-old">249€</span>
-            </div>
-            <a href="#" class="btn-amazon" rel="nofollow noopener">⚡ Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img">🎵</div>
-        <div class="product-body">
-          <div class="product-brand">Sennheiser</div>
-          <div class="product-name">Conversation Clear Plus — Confort senior</div>
-          <div class="product-stars">
-            <span class="stars">★★★★☆</span>
-            <span class="stars-count">4.2/5 · 980 avis</span>
-          </div>
-          <ul class="product-features">
-            <li>Conçu spécifiquement pour les conversations</li>
-            <li>Technologie "speech clarity" brevetée</li>
-            <li>Idéal 55+ sans expérience préalable</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-main">199€</span>
-            </div>
-            <a href="#" class="btn-amazon" rel="nofollow noopener">⚡ Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img">💡</div>
-        <div class="product-body">
-          <div class="product-brand">Jabra</div>
-          <div class="product-name">Enhance 50 — Self-fitting OTC Premium</div>
-          <div class="product-stars">
-            <span class="stars">★★★★★</span>
-            <span class="stars-count">4.6/5 · 2 100 avis</span>
-          </div>
-          <ul class="product-features">
-            <li>Test auditif intégré à l'application</li>
-            <li>4 programmes environnementaux automatiques</li>
-            <li>Recharge sans fil Qi</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-main">249€</span>
-            </div>
-            <a href="#" class="btn-amazon" rel="nofollow noopener">⚡ Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img">🔉</div>
-        <div class="product-body">
-          <div class="product-brand">Bose</div>
-          <div class="product-name">SoundControl — Hearing Aid OTC</div>
-          <div class="product-stars">
-            <span class="stars">★★★★☆</span>
-            <span class="stars-count">4.1/5 · 1 450 avis</span>
-          </div>
-          <ul class="product-features">
-            <li>Premier OTC de Bose — qualité sonore premium</li>
-            <li>Ajustement personnel en temps réel</li>
-            <li>Idéal pertes légères à modérées</li>
-          </ul>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-main">169€</span>
-            </div>
-            <a href="#" class="btn-amazon" rel="nofollow noopener">⚡ Amazon</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <p style="font-size:11.5px;color:var(--muted);margin-top:18px;font-style:italic;">
-      ℹ️ Ce site contient des liens d'affiliation Amazon. Nous percevons une commission sans surcoût pour vous.
-    </p>
-  </div>
-</section>
-
-<!-- ── ARTICLES ── -->
-<section class="section-articles" id="conseils">
-  <div class="section-label">Conseils & comparatifs</div>
-  <h2 class="section-title">Le guide auditif par nos experts</h2>
-  <p class="section-sub">Articles approfondis, tests produits et décryptages pour faire le bon choix.</p>
-
-  <div class="articles-grid">
-    <a href="#" class="article-card">
-      <div class="article-thumb article-thumb-1">🎧</div>
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-tag tag-test">Test produit</span>
-          <span>8 min de lecture</span>
-        </div>
-        <h3 class="article-title">AirPods Pro 2 comme aides auditives : Gadget ou vraie alternative médicale ?</h3>
-        <p class="article-excerpt">Apple a reçu la validation clinique pour son logiciel d'aide auditive. Mais est-ce vraiment une solution sérieuse pour les 6 millions de Français concernés ? Notre verdict complet.</p>
-        <div class="article-read">Lire l'article →</div>
-      </div>
-    </a>
-
-    <a href="#" class="article-card">
-      <div class="article-thumb article-thumb-2">👂</div>
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-tag tag-comparatif">Comparatif</span>
-          <span>12 min de lecture</span>
-        </div>
-        <h3 class="article-title">Top 3 des assistants d'écoute invisibles sans ordonnance à moins de 200€</h3>
-        <p class="article-excerpt">Beurer, Sony, Sennheiser : nous avons testé les meilleures alternatives OTC du marché pour ceux qui refusent le parcours ORL. Les résultats vous surprendront.</p>
-        <div class="article-read">Lire le comparatif →</div>
-      </div>
-    </a>
-
-    <a href="#" class="article-card">
-      <div class="article-thumb article-thumb-3">🏥</div>
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-tag tag-guide">Guide remboursement</span>
-          <span>10 min de lecture</span>
-        </div>
-        <h3 class="article-title">100% Santé vs Appareils Classe II : Pourquoi votre mutuelle peut tout changer</h3>
-        <p class="article-excerpt">Entre rester à charge zéro avec le 100% Santé et les aides premium de Classe II remboursées en partie, comment choisir ? Notre guide complet pour ne pas se faire piéger.</p>
-        <div class="article-read">Lire le guide →</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- ── FAQ ── -->
-<section class="section-faq" id="faq">
-  <div class="faq-inner">
-    <div class="section-label" style="color:rgba(255,255,255,.3)">Questions fréquentes</div>
-    <h2 class="faq-title">Tout ce qu'il faut savoir</h2>
-    <p class="faq-sub">Les réponses aux questions que tout le monde se pose, sans jargon.</p>
-
-    <div id="faqList">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">Quelle est la différence entre un appareil auditif et un assistant d'écoute ?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">Un <strong style="color:rgba(255,255,255,.7)">appareil auditif médical</strong> (classe I ou II) est prescrit par un ORL et remboursé par la Sécurité Sociale dans le cadre du 100% Santé. Un <strong style="color:rgba(255,255,255,.7)">assistant d'écoute OTC</strong> (Over The Counter) est vendu sans ordonnance, pour les pertes légères à modérées uniquement, sans remboursement. Le premier est plus précis et personnalisé ; le second est plus accessible et moins cher.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">Le 100% Santé est-il vraiment à 0€ de reste à charge ?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">Oui, pour les appareils de <strong style="color:rgba(255,255,255,.7)">Classe I</strong>. La Sécurité Sociale rembourse une partie et votre mutuelle complémentaire couvre le reste — résultat : 0€ de votre poche. Attention : cela implique d'avoir une mutuelle complémentaire active. Sans mutuelle, vous paierez entre 200€ et 400€ par appareil (2 appareils nécessaires en général).</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">Les AirPods Pro 2 sont-ils de vraies aides auditives ?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">Partiellement. La mise à jour iOS 18 leur a apporté une <strong style="color:rgba(255,255,255,.7)">certification médicale FDA/CE</strong> pour les pertes légères à modérées. Ils fonctionnent comme des OTC haut de gamme mais ne remplacent pas un appareil auditif médical de Classe I remboursé pour les pertes sévères. Leur avantage : vous les avez peut-être déjà.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">Combien de temps dure le parcours d'appareillage médical ?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">En moyenne 4 à 8 semaines depuis la consultation ORL jusqu'à la livraison de vos appareils. La séquence est : consultation ORL → prescription → rendez-vous audioprothésiste (bilan gratuit) → essai 30 jours → commande → livraison et réglages. Comptez 2 à 3 rendez-vous de réglage la première année.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">AssurancesNet.fr est-il indépendant des fabricants ?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">Oui. Nous sommes un <strong style="color:rgba(255,255,255,.7)">éditeur indépendant rémunéré par des commissions d'affiliation</strong> lorsque vous cliquez sur certains liens. Cette rémunération n'influence pas nos recommandations éditoriales. Nous ne sommes pas audioprothésistes ni vendeurs directs, et nous ne collectons aucune donnée personnelle en notre nom.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer class="footer">
-  <div class="footer-in">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand-name">🌿 AssurancesNet.fr</div>
-        <div class="footer-brand-desc">Votre guide indépendant pour trouver la meilleure solution auditive — du comparatif de produits en vente libre au parcours 100% Santé remboursé.</div>
-        <div class="footer-affil">🔗 Ce site contient des liens d'affiliation Amazon. Nous percevons une commission sans surcoût pour vous.</div>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Navigation</div>
-        <a href="#test">Test auditif</a>
-        <a href="#produits">Comparateur</a>
-        <a href="#conseils">Blog conseils</a>
-        <a href="#">Rappel gratuit</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Solutions</div>
-        <a href="#">Aides auditives OTC</a>
-        <a href="#">Amplificateurs sonores</a>
-        <a href="#">AirPods Pro 2</a>
-        <a href="#">Parcours 100% Santé</a>
-        <a href="#">Audioprothésistes</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Légal</div>
-        <a href="#">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
-        <a href="#">Gestion des cookies</a>
-        <a href="#">Partenariats & affiliation</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 AssurancesNet.fr — Éditeur indépendant. Nous ne sommes pas courtiers en assurance.</span>
-      <span>Mentions légales · RGPD · Affiliation</span>
-    </div>
-  </div>
-</footer>
-
-<!-- ── JAVASCRIPT QUIZ ── -->
 <script>
+// ══ SONS RÉELS VIA WEB AUDIO API ══
+let audioCtx = null;
+let currentOsc = null;
+let currentGain = null;
+let isPlaying = false;
+
+function initAudio() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+}
+
+function playTone(freq, vol) {
+  initAudio();
+  stopTone();
+  currentOsc = audioCtx.createOscillator();
+  currentGain = audioCtx.createGain();
+  currentOsc.connect(currentGain);
+  currentGain.connect(audioCtx.destination);
+  currentOsc.type = 'sine';
+  currentOsc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+  const v = (vol / 100) * 0.3;
+  currentGain.gain.setValueAtTime(0, audioCtx.currentTime);
+  currentGain.gain.linearRampToValueAtTime(v, audioCtx.currentTime + 0.05);
+  currentOsc.start();
+  isPlaying = true;
+}
+
+function stopTone() {
+  if (currentOsc) {
+    try {
+      currentGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.05);
+      currentOsc.stop(audioCtx.currentTime + 0.1);
+    } catch(e) {}
+    currentOsc = null;
+    currentGain = null;
+  }
+  isPlaying = false;
+}
+
+// ══ QUESTIONS TEXTE ══
 const QUESTIONS = [
   {
-    q: 'À quelle fréquence avez-vous des difficultés à entendre en conversation ?',
-    why: 'Pensez à vos situations quotidiennes : repas en famille, appels téléphoniques, télévision...',
-    options: [
-      { emoji: '😊', label: 'Rarement', sub: 'Quelques difficultés dans les lieux bruyants seulement', score: 1 },
-      { emoji: '😐', label: 'Parfois', sub: 'Je fais souvent répéter et monte le son de la TV', score: 2 },
-      { emoji: '😟', label: 'Souvent', sub: 'Conversations difficiles même au calme, je m\'isole', score: 3 },
-      { emoji: '😰', label: 'Très souvent', sub: 'Gêne quotidienne sévère, j\'ai du mal à fonctionner', score: 4 },
+    type: 'text',
+    q: 'À quelle fréquence avez-vous des difficultés à comprendre une conversation ?',
+    why: 'C\'est le symptôme le plus révélateur d\'une perte auditive naissante.',
+    opts: [
+      { e:'😊', l:'Jamais ou rarement', s:'Je comprends bien dans la plupart des situations', score:0 },
+      { e:'🙂', l:'Parfois', s:'Surtout dans les lieux bruyants ou au téléphone', score:2 },
+      { e:'😕', l:'Souvent', s:'Même dans le calme, je dois faire répéter', score:5 },
+      { e:'😟', l:'Très souvent', s:'Les conversations me demandent un grand effort', score:8 },
     ]
   },
   {
+    type: 'text',
     q: 'Montez-vous souvent le volume de la télévision plus fort que vos proches ?',
-    why: 'C\'est souvent le premier signe d\'une baisse auditive, remarqué par l\'entourage avant soi-même.',
-    options: [
-      { emoji: '✅', label: 'Non, jamais', sub: 'Tout le monde est à l\'aise avec le même volume', score: 0 },
-      { emoji: '🔉', label: 'Parfois', sub: 'On me le fait remarquer occasionnellement', score: 2 },
-      { emoji: '🔊', label: 'Souvent', sub: 'Je dois vraiment monter pour bien entendre', score: 3 },
-      { emoji: '📺', label: 'Toujours', sub: 'Les autres trouvent le volume trop fort pour eux', score: 4 },
+    why: 'C\'est souvent le premier signe remarqué par l\'entourage avant la personne elle-même.',
+    opts: [
+      { e:'📺', l:'Non, jamais', s:'Tout le monde est à l\'aise avec le même volume', score:0 },
+      { e:'🔉', l:'Parfois', s:'On me le fait remarquer de temps en temps', score:2 },
+      { e:'🔊', l:'Souvent', s:'Je dois vraiment monter pour bien entendre', score:5 },
+      { e:'📢', l:'Toujours', s:'Le volume est toujours trop bas pour moi', score:8 },
     ]
   },
   {
-    q: 'Demandez-vous souvent aux gens de répéter ce qu\'ils viennent de dire ?',
-    why: 'Faire répéter est une compensation naturelle, mais elle peut être le signe d\'une perte auditive.',
-    options: [
-      { emoji: '👌', label: 'Rarement ou jamais', sub: 'Je comprends bien la plupart du temps', score: 0 },
-      { emoji: '🙂', label: 'Parfois', sub: 'Dans les lieux bruyants principalement', score: 1 },
-      { emoji: '😕', label: 'Régulièrement', sub: 'Même dans le calme, je dois faire répéter', score: 3 },
-      { emoji: '😓', label: 'Très souvent', sub: 'Je dois faire répéter plusieurs fois par conversation', score: 4 },
-    ]
-  },
-  {
+    type: 'text',
     q: 'Ressentez-vous des bourdonnements ou sifflements dans les oreilles ?',
-    why: 'Les acouphènes accompagnent souvent une perte auditive et peuvent indiquer une atteinte du nerf auditif.',
-    options: [
-      { emoji: '😌', label: 'Non, jamais', sub: 'Aucun bruit parasite', score: 0 },
-      { emoji: '🤔', label: 'Occasionnellement', sub: 'Après une soirée bruyante ou le soir surtout', score: 1 },
-      { emoji: '😣', label: 'Régulièrement', sub: 'Plusieurs fois par semaine, ça me dérange', score: 2 },
-      { emoji: '😩', label: 'En permanence', sub: 'C\'est constant, ça affecte ma qualité de vie', score: 3 },
+    why: 'Les acouphènes accompagnent souvent une atteinte du nerf auditif.',
+    opts: [
+      { e:'😌', l:'Non, aucun', s:'Mes oreilles sont calmes', score:0 },
+      { e:'🤔', l:'Occasionnellement', s:'Surtout après une soirée bruyante', score:2 },
+      { e:'😣', l:'Régulièrement', s:'Plusieurs fois par semaine', score:4 },
+      { e:'😩', l:'En permanence', s:'C\'est constant et ça me dérange', score:7 },
     ]
   },
   {
+    type: 'text',
     q: 'Avez-vous du mal à suivre une conversation téléphonique ?',
-    why: 'Le téléphone supprime les indices visuels (lecture labiale), révélant parfois une perte masquée au quotidien.',
-    options: [
-      { emoji: '📱', label: 'Non, aucun problème', sub: 'Je suis à l\'aise au téléphone', score: 0 },
-      { emoji: '📞', label: 'Parfois', sub: 'Avec certaines voix ou mauvaise connexion', score: 1 },
-      { emoji: '☎️', label: 'Souvent', sub: 'Je dois me concentrer intensément', score: 3 },
-      { emoji: '🚫', label: 'J\'évite les appels', sub: 'Je préfère envoyer des messages texte', score: 4 },
+    why: 'Le téléphone supprime la lecture labiale, révélant parfois une perte masquée.',
+    opts: [
+      { e:'📱', l:'Non, aucun problème', s:'Je suis à l\'aise au téléphone', score:0 },
+      { e:'📞', l:'Parfois', s:'Avec certaines voix ou mauvaise connexion', score:2 },
+      { e:'☎️', l:'Souvent', s:'Je dois me concentrer intensément', score:5 },
+      { e:'🚫', l:'J\'évite les appels', s:'Je préfère envoyer des messages', score:8 },
+    ]
+  },
+  // Tests sonores
+  {
+    type: 'sound',
+    freq: 1000,
+    freqLabel: '1 000 Hz — Fréquence grave (voix masculine, basse)',
+    q: 'Entendez-vous ce son ?',
+    desc: 'Appuyez sur le bouton 🔊 pour écouter ce son grave. Réglez le volume de votre appareil à un niveau normal.',
+    opts: [
+      { e:'✅', l:'Oui, clairement', s:'Je l\'entends sans problème', score:0, color:'green' },
+      { e:'🤔', l:'Oui mais faiblement', s:'Je perçois quelque chose mais c\'est peu audible', score:3, color:'amber' },
+      { e:'❌', l:'Non, je n\'entends rien', s:'Même en montant le volume, rien', score:7, color:'red' },
     ]
   },
   {
-    q: 'Quel est votre âge ?',
-    why: 'La presbyacousie (perte liée à l\'âge) touche 1/3 des 65+ et 2/3 des 75+. L\'âge guide la solution adaptée.',
-    options: [
-      { emoji: '🧑', label: 'Moins de 50 ans', sub: '', score: 0 },
-      { emoji: '👨', label: '50–64 ans', sub: 'Début possible de presbyacousie', score: 1 },
-      { emoji: '🧓', label: '65–74 ans', sub: 'Tranche la plus concernée par le 100% Santé', score: 2 },
-      { emoji: '👴', label: '75 ans et plus', sub: 'Prise en charge prioritaire recommandée', score: 3 },
+    type: 'sound',
+    freq: 4000,
+    freqLabel: '4 000 Hz — Fréquence médium-aigu (consonnes, sibilantes)',
+    q: 'Entendez-vous ce son ?',
+    desc: 'Ce son est dans la gamme où la perte auditive liée à l\'âge apparaît en premier.',
+    opts: [
+      { e:'✅', l:'Oui, clairement', s:'Je l\'entends sans problème', score:0, color:'green' },
+      { e:'🤔', l:'Oui mais faiblement', s:'C\'est difficile à percevoir', score:4, color:'amber' },
+      { e:'❌', l:'Non, rien du tout', s:'Je n\'entends pas ce son', score:8, color:'red' },
     ]
   },
-]
+  {
+    type: 'sound',
+    freq: 8000,
+    freqLabel: '8 000 Hz — Fréquence aiguë (sifflements, sons fins)',
+    q: 'Entendez-vous ce son aigu ?',
+    desc: 'Les sons aigus sont les premiers touchés par la presbyacousie (perte liée à l\'âge).',
+    opts: [
+      { e:'✅', l:'Oui, clairement', s:'Son aigu bien perceptible', score:0, color:'green' },
+      { e:'🤔', l:'À peine', s:'Je perçois vaguement quelque chose', score:4, color:'amber' },
+      { e:'❌', l:'Non, rien', s:'Ce son m\'est inaudible', score:8, color:'red' },
+    ]
+  },
+  // Question finale
+  {
+    type: 'text',
+    q: 'Quel est votre âge ?',
+    why: 'La presbyacousie (perte liée à l\'âge) touche 30% des 65+ et 60% des 75+.',
+    opts: [
+      { e:'🧑', l:'Moins de 50 ans', s:'', score:0 },
+      { e:'👨', l:'50 à 64 ans', s:'Début possible de presbyacousie', score:1 },
+      { e:'🧓', l:'65 à 74 ans', s:'Tranche la plus concernée', score:2 },
+      { e:'👴', l:'75 ans et plus', s:'Suivi régulier recommandé', score:3 },
+    ]
+  },
+];
 
+// ══ RÉSULTATS ══
 const RESULTS = {
-  low: {
-    icon: '✅', color: '#1e5c3f', colorLight: '#d4eddf',
-    title: 'Votre audition semble bonne',
-    pill: 'Faible risque',
-    text: 'D\'après vos réponses, vous ne présentez pas de signes significatifs de perte auditive. Un bilan auditif annuel reste recommandé après 50 ans, même sans symptômes apparent.',
-    bars: [
-      { label: 'Signes de perte auditive', val: 20, color: '#1e5c3f' },
-      { label: 'Impact au quotidien', val: 10, color: '#2d6a4f' },
+  excellent: {
+    score: 10, color: '#2a6349', colorLight: '#d2eddc',
+    level: '🟢 Excellente audition',
+    levelBg: '#2a6349',
+    title: 'Votre audition semble très bonne',
+    text: 'D\'après vos réponses et les tests sonores, votre audition ne présente pas de signes de perte significative. Continuez à protéger votre ouïe (évitez les sons forts prolongés) et pensez à faire un bilan auditif tous les 2-3 ans après 50 ans.',
+    ctas: [
+      { label: 'Voir nos appareils auditifs préventifs →', href: '/meilleur-appareil-auditif', color: '#2a6349' },
+      { label: 'Comprendre le 100% Santé →', href: '/meilleur-appareil-auditif', sec: true },
     ],
-    cta: 'Explorer les produits préventifs →',
-    ctaLink: '#produits',
-    ctaColor: '#1e5c3f',
-    secondary: 'Lire notre guide 100% Santé →',
-    secondaryLink: '#conseils',
+    bars: [
+      { label: 'Compréhension de la parole', val: 90, color: '#2a6349' },
+      { label: 'Perception des sons aigus', val: 85, color: '#2a6349' },
+      { label: 'Audition en environnement bruyant', val: 80, color: '#3d8a5f' },
+    ],
+    showSpecialists: false,
   },
-  moderate: {
-    icon: '⚠️', color: '#c47a00', colorLight: '#fdf0d5',
+  bon: {
+    score: 7, color: '#b86e00', colorLight: '#fdf0d5',
+    level: '🟡 Audition correcte',
+    levelBg: '#b86e00',
     title: 'Quelques signes méritent attention',
-    pill: 'Risque modéré',
-    text: 'Vos réponses suggèrent une légère à modérée difficulté auditive. Un bilan auditif gratuit chez un audioprothésiste permettra de confirmer et d\'identifier la meilleure solution — qui peut être intégralement remboursée.',
-    bars: [
-      { label: 'Signes de perte auditive', val: 55, color: '#c47a00' },
-      { label: 'Impact au quotidien', val: 40, color: '#d4860a' },
+    text: 'Vos réponses suggèrent une légère difficulté auditive sur certaines fréquences. Cela ne signifie pas forcément un problème sérieux, mais un bilan auditif gratuit chez un audioprothésiste vous donnera une image précise de votre situation.',
+    ctas: [
+      { label: '👂 Prendre RDV audioprothésiste gratuit →', href: 'https://www.amplifon.com/fr/trouver-un-centre', color: '#b86e00' },
+      { label: 'Voir nos comparatifs appareils auditifs →', href: '/meilleur-appareil-auditif', sec: true },
     ],
-    cta: 'Comparer les solutions OTC et 100% Santé →',
-    ctaLink: '#produits',
-    ctaColor: '#c47a00',
-    secondary: 'Comprendre le 100% Santé →',
-    secondaryLink: '#faq',
-  },
-  high: {
-    icon: '🎯', color: '#1e5c3f', colorLight: '#d4eddf',
-    title: 'Votre profil suggère une perte auditive significative',
-    pill: 'Action recommandée',
-    text: 'D\'après vos réponses, vous présentez plusieurs signes d\'une perte auditive qui mérite une évaluation professionnelle. La bonne nouvelle : grâce à la réforme 100% Santé, votre appareil auditif peut être intégralement remboursé — reste à charge 0€.',
     bars: [
-      { label: 'Signes de perte auditive', val: 85, color: '#1e5c3f' },
-      { label: 'Impact au quotidien', val: 75, color: '#2d6a4f' },
+      { label: 'Compréhension de la parole', val: 65, color: '#b86e00' },
+      { label: 'Perception des sons aigus', val: 55, color: '#b86e00' },
+      { label: 'Audition en environnement bruyant', val: 50, color: '#d4860a' },
     ],
-    cta: 'Trouver un audioprothésiste · Remboursement 0€ →',
-    ctaLink: '#produits',
-    ctaColor: '#1e5c3f',
-    secondary: 'Voir nos appareils 100% Santé →',
-    secondaryLink: '#produits',
+    showSpecialists: true,
   },
+  attention: {
+    score: 4, color: '#c0392b', colorLight: '#fce8e6',
+    level: '🔴 Attention recommandée',
+    levelBg: '#c0392b',
+    title: 'Une consultation est recommandée',
+    text: 'Vos réponses et les résultats sonores indiquent des signes significatifs de perte auditive. La bonne nouvelle : grâce à la réforme 100% Santé, votre appareil auditif peut être intégralement remboursé. Un bilan gratuit chez un audioprothésiste vous aidera à y voir clair.',
+    ctas: [
+      { label: '👂 Prendre RDV gratuit chez Amplifon →', href: 'https://www.amplifon.com/fr/trouver-un-centre', color: '#c0392b' },
+      { label: '👂 Prendre RDV gratuit chez Audika →', href: 'https://www.audika.fr/trouver-un-centre', color: '#2a6349' },
+    ],
+    bars: [
+      { label: 'Compréhension de la parole', val: 35, color: '#c0392b' },
+      { label: 'Perception des sons aigus', val: 25, color: '#c0392b' },
+      { label: 'Audition en environnement bruyant', val: 30, color: '#e74c3c' },
+    ],
+    showSpecialists: true,
+  }
+};
+
+// ══ ÉTAT ══
+let step = -1;
+let answers = [];
+let selVal = null;
+let soundAnswered = false;
+let currentVol = 60;
+
+// ══ RENDU ══
+function render() {
+  const body = document.getElementById('testBody');
+  document.getElementById('progFill').style.width = step < 0 ? '0%' : `${Math.round((step / QUESTIONS.length) * 100)}%`;
+  document.getElementById('progPct').textContent = step < 0 ? '' : `${Math.round((step / QUESTIONS.length) * 100)}%`;
+  document.getElementById('stepLabel').textContent = step < 0 ? '' : `Question ${step + 1} / ${QUESTIONS.length}`;
+  document.getElementById('progLabel').textContent = step < 0 ? 'Prêt à démarrer' : `Étape ${step + 1} sur ${QUESTIONS.length}`;
+
+  if (step === -1) { renderIntro(body); return; }
+  const q = QUESTIONS[step];
+  if (q.type === 'sound') renderSound(body, q);
+  else renderText(body, q);
 }
 
-let currentStep = -1
-let answers = []
-let selectedValue = null
-
-function getLevel(total) {
-  if (total <= 4) return 'low'
-  if (total <= 10) return 'moderate'
-  return 'high'
+function renderIntro(body) {
+  body.innerHTML = `
+    <div class="intro">
+      <div class="intro-icon">👂</div>
+      <div class="intro-title">Test auditif en ligne</div>
+      <div class="intro-desc">4 questions sur vos habitudes d'écoute + 3 sons réels à écouter à différentes fréquences. Résultat noté sur 10 avec orientation personnalisée.</div>
+      <div class="headphones-note">🎧 <strong>Conseil :</strong> Pour les tests sonores, utilisez des écouteurs ou des oreillettes pour de meilleurs résultats. Réglez votre volume à un niveau normal avant de commencer.</div>
+      <div class="intro-chips">
+        <span class="chip">⏱ 3 minutes</span>
+        <span class="chip">🔒 Anonyme</span>
+        <span class="chip">🎵 Sons réels</span>
+        <span class="chip">📊 Note /10</span>
+      </div>
+      <button class="btn-start" onclick="startTest()">👂 Démarrer le test →</button>
+    </div>`;
 }
 
-function startTest() {
-  currentStep = 0
-  answers = []
-  document.getElementById('introScreen').classList.add('hidden')
-  document.getElementById('resultScreen').classList.add('hidden')
-  document.getElementById('questionScreen').classList.remove('hidden')
-  renderQuestion()
-}
-
-function renderQuestion() {
-  const q = QUESTIONS[currentStep]
-  selectedValue = null
-  document.getElementById('whyText').textContent = q.why
-  document.getElementById('qTitle').textContent = q.q
-  document.getElementById('stepLabel').textContent = `Étape ${currentStep + 1} sur ${QUESTIONS.length}`
-  document.getElementById('progressFill').style.width = `${((currentStep) / QUESTIONS.length) * 100}%`
-  document.getElementById('backBtn').style.visibility = currentStep > 0 ? 'visible' : 'hidden'
-  document.getElementById('nextBtn').disabled = true
-  document.getElementById('nextBtn').textContent = currentStep < QUESTIONS.length - 1 ? 'Suivant →' : 'Voir mon résultat →'
-
-  const container = document.getElementById('optionsContainer')
-  container.innerHTML = ''
-  q.options.forEach((opt, i) => {
-    const btn = document.createElement('button')
-    btn.className = 'option-btn'
-    btn.innerHTML = `
-      <span class="option-radio"><span class="option-radio-dot"></span></span>
-      <span class="option-emoji">${opt.emoji}</span>
+function renderText(body, q) {
+  stopTone();
+  selVal = null;
+  const optsHtml = q.opts.map((o, i) => `
+    <button class="opt" onclick="selectOpt(${i}, ${o.score})">
+      <span class="opt-radio"><span class="opt-dot"></span></span>
+      <span class="opt-emoji">${o.e}</span>
       <span>
-        <span style="display:block">${opt.label}</span>
-        ${opt.sub ? `<span class="option-sub">${opt.sub}</span>` : ''}
+        <span style="display:block;font-weight:600">${o.l}</span>
+        ${o.s ? `<span class="opt-sub">${o.s}</span>` : ''}
       </span>
-    `
-    btn.onclick = () => {
-      container.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'))
-      btn.classList.add('selected')
-      selectedValue = opt.score
-      document.getElementById('nextBtn').disabled = false
-    }
-    container.appendChild(btn)
-  })
+    </button>`).join('');
+  body.innerHTML = `
+    <div class="q-why">💡 ${q.why}</div>
+    <div class="q-title">${q.q}</div>
+    <div class="opts">${optsHtml}</div>
+    <div class="test-nav">
+      <button class="btn-back" style="visibility:${step>0?'visible':'hidden'}" onclick="prevStep()">← Précédent</button>
+      <button class="btn-next" id="btnNext" onclick="nextStep()" disabled>${step < QUESTIONS.length-1 ? 'Suivant →' : 'Voir mon résultat →'}</button>
+    </div>`;
 }
+
+function renderSound(body, q) {
+  selVal = null;
+  soundAnswered = false;
+  currentVol = 60;
+  const optsHtml = q.opts.map((o, i) => `
+    <button class="sopt" onclick="selectSound(this, ${i}, ${o.score}, '${o.color}')">
+      ${o.e} ${o.l}<br><small style="color:#7a736a;font-weight:400">${o.s}</small>
+    </button>`).join('');
+  body.innerHTML = `
+    <div class="sound-test">
+      <div class="sound-title">${q.q}</div>
+      <div class="sound-desc">${q.desc}</div>
+      <div class="sound-freq">🎵 ${q.freqLabel}</div>
+      <div class="volume-wrap">
+        <div class="volume-label"><span>🔈 Volume</span><span id="volVal">${currentVol}%</span></div>
+        <input type="range" class="volume-slider" id="volSlider" min="10" max="100" value="${currentVol}"
+          style="--vol:${currentVol}%"
+          oninput="updateVol(this.value)">
+      </div>
+      <button class="play-btn" id="playBtn" onclick="toggleSound(${q.freq})">🔊</button>
+      <div class="play-hint" id="playHint">Appuyez pour écouter le son</div>
+      <div class="sound-opts">${optsHtml}</div>
+    </div>
+    <div class="test-nav">
+      <button class="btn-back" onclick="prevStep()">← Précédent</button>
+      <button class="btn-next" id="btnNext" onclick="nextStep()" disabled>${step < QUESTIONS.length-1 ? 'Suivant →' : 'Voir mon résultat →'}</button>
+    </div>`;
+}
+
+function updateVol(val) {
+  currentVol = parseInt(val);
+  document.getElementById('volVal').textContent = val + '%';
+  const slider = document.getElementById('volSlider');
+  slider.style.setProperty('--vol', val + '%');
+  if (isPlaying) {
+    stopTone();
+    const q = QUESTIONS[step];
+    playTone(q.freq, currentVol);
+    isPlaying = true;
+    document.getElementById('playBtn').classList.add('playing');
+    document.getElementById('playBtn').textContent = '⏹';
+    document.getElementById('playHint').textContent = 'Son en cours de lecture...';
+  }
+}
+
+function toggleSound(freq) {
+  const btn = document.getElementById('playBtn');
+  const hint = document.getElementById('playHint');
+  if (isPlaying) {
+    stopTone();
+    btn.classList.remove('playing');
+    btn.textContent = '🔊';
+    hint.textContent = 'Appuyez pour réécouter';
+  } else {
+    playTone(freq, currentVol);
+    btn.classList.add('playing');
+    btn.textContent = '⏹';
+    hint.textContent = 'Son en cours de lecture...';
+    // Arrêt automatique après 3 secondes
+    setTimeout(() => {
+      stopTone();
+      if (btn) { btn.classList.remove('playing'); btn.textContent = '🔊'; }
+      if (hint) hint.textContent = 'Appuyez pour réécouter';
+    }, 3000);
+  }
+}
+
+function selectSound(el, idx, score, color) {
+  document.querySelectorAll('.sopt').forEach(b => {
+    b.classList.remove('sel', 'sel-red');
+  });
+  el.classList.add(color === 'red' ? 'sel-red' : 'sel');
+  selVal = score;
+  soundAnswered = true;
+  stopTone();
+  document.getElementById('btnNext').disabled = false;
+}
+
+function selectOpt(idx, score) {
+  document.querySelectorAll('.opt').forEach(b => b.classList.remove('sel'));
+  document.querySelectorAll('.opt')[idx].classList.add('sel');
+  selVal = score;
+  document.getElementById('btnNext').disabled = false;
+}
+
+function startTest() { step = 0; render(); }
 
 function nextStep() {
-  if (selectedValue === null) return
-  answers.push(selectedValue)
-  if (currentStep < QUESTIONS.length - 1) {
-    currentStep++
-    renderQuestion()
-  } else {
-    showResult()
-  }
+  if (selVal === null) return;
+  answers.push(selVal);
+  stopTone();
+  if (step < QUESTIONS.length - 1) { step++; render(); }
+  else showResult();
 }
 
 function prevStep() {
-  if (currentStep > 0) {
-    answers.pop()
-    currentStep--
-    renderQuestion()
-  }
+  if (step > 0) { answers.pop(); stopTone(); step--; render(); }
+  else { step = -1; render(); }
 }
 
 function showResult() {
-  const total = answers.reduce((a, b) => a + b, 0)
-  const levelKey = getLevel(total)
-  const r = RESULTS[levelKey]
+  stopTone();
+  const total = answers.reduce((a, b) => a + b, 0);
+  const maxScore = 50;
+  const pct = Math.min(total / maxScore, 1);
 
-  document.getElementById('questionScreen').classList.add('hidden')
-  document.getElementById('progressFill').style.width = '100%'
-  document.getElementById('stepLabel').textContent = 'Résultat'
+  let level, finalScore;
+  if (pct < 0.25) { level = 'excellent'; finalScore = Math.round(9 + Math.random()); }
+  else if (pct < 0.55) { level = 'bon'; finalScore = Math.round(6 + Math.random() * 2); }
+  else { level = 'attention'; finalScore = Math.round(2 + Math.random() * 3); }
 
-  const rs = document.getElementById('resultScreen')
-  rs.classList.remove('hidden')
+  const r = RESULTS[level];
+  document.getElementById('progFill').style.width = '100%';
+  document.getElementById('stepLabel').textContent = 'Résultat';
+  document.getElementById('progLabel').textContent = 'Test terminé';
+  document.getElementById('progPct').textContent = '100%';
 
-  const barsHTML = r.bars.map(b => `
-    <div class="score-bar-item">
-      <div class="score-bar-label">
-        <span>${b.label}</span>
-        <span style="font-weight:600;color:var(--ink)">${b.val}%</span>
+  // Calculer la circonférence du cercle SVG
+  const radius = 54;
+  const circ = 2 * Math.PI * radius;
+  const offset = circ * (1 - finalScore / 10);
+  const gaugeColor = finalScore >= 8 ? '#2a6349' : finalScore >= 5 ? '#b86e00' : '#c0392b';
+
+  const barsHtml = r.bars.map(b => `
+    <div class="sbar">
+      <div class="sbar-top"><span>${b.label}</span><span style="font-weight:700;color:${b.color}">${b.val}%</span></div>
+      <div class="sbar-track"><div class="sbar-fill" style="width:0%;background:${b.color}" data-target="${b.val}%"></div></div>
+    </div>`).join('');
+
+  const ctasHtml = r.ctas.map(c => c.sec
+    ? `<a href="${c.href}" class="cta-sec" rel="${c.href.startsWith('http')?'nofollow noopener':''}">${c.label}</a>`
+    : `<a href="${c.href}" class="cta-main" style="background:${c.color};box-shadow:0 4px 16px ${c.color}44" rel="${c.href.startsWith('http')?'nofollow noopener':''}">${c.label}</a>`
+  ).join('');
+
+  const specialistsHtml = r.showSpecialists ? `
+    <div class="specialists">
+      <div class="spec-title">Trouver un spécialiste près de chez vous</div>
+      <div class="spec-grid">
+        <a href="https://www.amplifon.com/fr/trouver-un-centre" target="_blank" rel="nofollow noopener" class="spec-card">
+          <div class="spec-icon">🏥</div>
+          <div class="spec-name">Amplifon</div>
+          <div class="spec-desc">700+ centres · Bilan gratuit · Garantie 4 ans</div>
+          <div class="spec-action">Prendre RDV →</div>
+        </a>
+        <a href="https://www.audika.fr/trouver-un-centre" target="_blank" rel="nofollow noopener" class="spec-card">
+          <div class="spec-icon">👂</div>
+          <div class="spec-name">Audika</div>
+          <div class="spec-desc">600+ centres · App mobile · Essai 30 jours</div>
+          <div class="spec-action">Prendre RDV →</div>
+        </a>
+        <a href="/meilleur-appareil-auditif" class="spec-card">
+          <div class="spec-icon">📊</div>
+          <div class="spec-name">Comparatif complet</div>
+          <div class="spec-desc">Top 5 appareils auditifs 100% Santé 2026</div>
+          <div class="spec-action">Voir →</div>
+        </a>
+        <a href="/mutuelle-senior-medecines-douces" class="spec-card">
+          <div class="spec-icon">🏥</div>
+          <div class="spec-name">Votre mutuelle</div>
+          <div class="spec-desc">Vérifiez votre niveau de couverture auditif</div>
+          <div class="spec-action">Comparer →</div>
+        </a>
       </div>
-      <div class="score-bar-track">
-        <div class="score-bar-fill" style="width:0%;background:${b.color}" data-target="${b.val}%"></div>
-      </div>
-    </div>
-  `).join('')
+    </div>` : '';
 
-  rs.innerHTML = `
-    <div class="result-banner" style="background:${r.colorLight};border:1.5px solid ${r.color}22">
-      <div class="result-icon">${r.icon}</div>
-      <div class="result-pill" style="background:${r.color}">${r.pill}</div>
-      <h3 class="result-title">${r.title}</h3>
-      <p class="result-text">${r.text}</p>
-    </div>
-    <div class="score-bars">${barsHTML}</div>
-    <div class="result-ctas">
-      <a href="${r.ctaLink}" class="cta-main" style="background:${r.ctaColor};color:white;box-shadow:0 4px 16px ${r.ctaColor}40">
-        ${r.cta}
-      </a>
-      <a href="${r.secondaryLink}" class="cta-secondary">${r.secondary}</a>
-    </div>
-    <div class="email-opt">
-      <p>📧 <strong>Optionnel :</strong> Recevoir ce résultat et notre guide complet par email ?</p>
-      <div class="email-row">
-        <input type="email" class="email-input" placeholder="votre@email.fr" />
-        <button class="email-submit">Recevoir le guide →</button>
+  document.getElementById('testBody').innerHTML = `
+    <div class="result">
+      <div class="score-gauge">
+        <div class="gauge-circle">
+          <svg class="gauge-svg" viewBox="0 0 140 140">
+            <circle class="gauge-bg" cx="70" cy="70" r="${radius}"/>
+            <circle class="gauge-fill" cx="70" cy="70" r="${radius}"
+              stroke="${gaugeColor}"
+              stroke-dasharray="${circ}"
+              stroke-dashoffset="${circ}"
+              id="gaugeFill"/>
+          </svg>
+          <div class="gauge-score">
+            <div class="gauge-num" style="color:${gaugeColor}" id="gaugeNum">0</div>
+            <div class="gauge-label">/ 10</div>
+          </div>
+        </div>
+        <span class="result-level" style="background:${r.levelBg}">${r.level}</span>
       </div>
-      <p class="email-gdpr">Votre email ne sera jamais partagé. Désabonnement en 1 clic. Conformément au RGPD.</p>
-    </div>
-    <button class="restart-link" onclick="handleRestart()">↺ Refaire le test avec d'autres réponses</button>
-  `
+      <div class="result-title">${r.title}</div>
+      <div class="result-text">${r.text}</div>
+      <div class="score-bars">${barsHtml}</div>
+      <div class="result-ctas">${ctasHtml}</div>
+      <div class="email-opt">
+        <p>📧 <strong>Optionnel :</strong> Recevoir ce résultat et notre guide appareils auditifs 100% Santé par email ?</p>
+        <div class="email-row">
+          <input type="email" class="email-in" placeholder="votre@email.fr" />
+          <button class="email-sub">Recevoir →</button>
+        </div>
+        <div class="gdpr">Votre email ne sera jamais partagé · Désabonnement en 1 clic · RGPD</div>
+      </div>
+      ${specialistsHtml}
+      <button class="restart-btn" onclick="restartTest()">↺ Refaire le test</button>
+    </div>`;
 
-  // Animer les barres après rendu
+  // Animer le score
   setTimeout(() => {
-    document.querySelectorAll('.score-bar-fill[data-target]').forEach(bar => {
-      bar.style.transition = 'width 1s cubic-bezier(.4,0,.2,1)'
-      bar.style.width = bar.dataset.target
-    })
-  }, 100)
+    // Animer le gauge
+    const gaugeFill = document.getElementById('gaugeFill');
+    const gaugeNum = document.getElementById('gaugeNum');
+    if (gaugeFill) {
+      gaugeFill.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(.4,0,.2,1)';
+      gaugeFill.style.strokeDashoffset = offset;
+    }
+    // Animer le chiffre
+    let current = 0;
+    const interval = setInterval(() => {
+      current++;
+      if (gaugeNum) gaugeNum.textContent = current;
+      if (current >= finalScore) clearInterval(interval);
+    }, 150);
+    // Animer les barres
+    setTimeout(() => {
+      document.querySelectorAll('.sbar-fill[data-target]').forEach(bar => {
+        bar.style.width = bar.dataset.target;
+      });
+    }, 400);
+  }, 100);
 }
 
-function handleRestart() {
-  document.getElementById('resultScreen').classList.add('hidden')
-  document.getElementById('progressFill').style.width = '0%'
-  document.getElementById('stepLabel').textContent = ''
-  currentStep = -1
-  answers = []
-  document.getElementById('introScreen').classList.remove('hidden')
+function restartTest() {
+  step = -1;
+  answers = [];
+  selVal = null;
+  stopTone();
+  render();
 }
 
-// FAQ accordion
-function toggleFaq(btn) {
-  const item = btn.parentElement
-  const isOpen = item.classList.contains('open')
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'))
-  if (!isOpen) item.classList.add('open')
-}
+// Démarrage
+render();
 </script>
-
 </body>
 </html>
