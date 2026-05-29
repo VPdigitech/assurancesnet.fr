@@ -666,6 +666,15 @@ document.querySelectorAll('.ni-btn').forEach(btn => {
     if (!isOpen) ni.classList.add('open');
   });
 });
+// Reset overflow on resize
+window.addEventListener('resize', function() {
+  if (window.innerWidth >= 768) {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
 document.addEventListener('click', function() {
   document.querySelectorAll('.ni.open').forEach(el => el.classList.remove('open'));
 });
