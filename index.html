@@ -45,9 +45,9 @@ body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-
 @media(min-width:768px){.hamburger{display:none}}
 
 /* Desktop bottom nav */
-.nav-bot{display:none;border-top:1px solid var(--brd);background:var(--surf)}
+.nav-bot{display:none;border-top:1px solid var(--brd);background:var(--surf);position:relative;z-index:500}
 @media(min-width:768px){.nav-bot{display:block}}
-.nav-bot-in{max-width:1140px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:44px;overflow-x:auto;scrollbar-width:none}
+.nav-bot-in{max-width:1140px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:44px;position:relative}
 .nav-bot-in::-webkit-scrollbar{display:none}
 .ni{position:relative;height:44px;display:flex;align-items:center}
 .ni-btn{display:flex;align-items:center;gap:5px;height:44px;padding:0 12px;background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;color:var(--mut);white-space:nowrap;transition:color .15s;border-bottom:2px solid transparent;position:relative}
@@ -57,7 +57,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-
 .nb-am{background:var(--aml);color:var(--am)}
 .ni-chev{font-size:9px;color:var(--mut2);transition:transform .2s}
 .ni.open .ni-chev{transform:rotate(180deg)}
-.ni-drop{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);background:var(--surf);border:1px solid var(--brd);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.1);padding:14px;min-width:260px;z-index:300;opacity:0;visibility:hidden;pointer-events:none;transition:all .2s}
+.ni-drop{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);background:var(--surf);border:1px solid var(--brd);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.1);padding:14px;min-width:260px;z-index:9999;opacity:0;visibility:hidden;pointer-events:none;transition:all .2s}
 .ni.open .ni-drop{opacity:1;visibility:visible;pointer-events:all;transform:translateX(-50%) translateY(0)}
 .ni-drop::before{content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(45deg);width:11px;height:11px;background:var(--surf);border-left:1px solid var(--brd);border-top:1px solid var(--brd)}
 .di{display:flex;align-items:flex-start;gap:11px;padding:9px 11px;border-radius:9px;text-decoration:none;color:inherit;transition:background .15s}
